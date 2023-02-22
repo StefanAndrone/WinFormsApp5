@@ -35,11 +35,17 @@
             this.RightArrow = new System.Windows.Forms.PictureBox();
             this.LeftArrow = new System.Windows.Forms.PictureBox();
             this.RedLine1 = new System.Windows.Forms.Button();
+            this.Laser1 = new System.Windows.Forms.Button();
+            this.Laser2 = new System.Windows.Forms.Button();
+            this.Lose1 = new System.Windows.Forms.PictureBox();
+            this.Back = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,12 +71,13 @@
             // Predator
             // 
             this.Predator.Image = ((System.Drawing.Image)(resources.GetObject("Predator.Image")));
-            this.Predator.Location = new System.Drawing.Point(483, 182);
+            this.Predator.Location = new System.Drawing.Point(483, 183);
             this.Predator.Name = "Predator";
             this.Predator.Size = new System.Drawing.Size(164, 222);
             this.Predator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Predator.TabIndex = 2;
             this.Predator.TabStop = false;
+            this.Predator.Click += new System.EventHandler(this.Predator_Click);
             // 
             // RightArrow
             // 
@@ -105,11 +112,59 @@
             this.RedLine1.TabIndex = 5;
             this.RedLine1.UseVisualStyleBackColor = false;
             // 
+            // Laser1
+            // 
+            this.Laser1.BackColor = System.Drawing.Color.Red;
+            this.Laser1.FlatAppearance.BorderSize = 0;
+            this.Laser1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Laser1.Location = new System.Drawing.Point(350, 200);
+            this.Laser1.Name = "Laser1";
+            this.Laser1.Size = new System.Drawing.Size(194, 3);
+            this.Laser1.TabIndex = 6;
+            this.Laser1.UseVisualStyleBackColor = false;
+            // 
+            // Laser2
+            // 
+            this.Laser2.BackColor = System.Drawing.Color.Red;
+            this.Laser2.FlatAppearance.BorderSize = 0;
+            this.Laser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Laser2.Location = new System.Drawing.Point(350, 207);
+            this.Laser2.Name = "Laser2";
+            this.Laser2.Size = new System.Drawing.Size(200, 3);
+            this.Laser2.TabIndex = 7;
+            this.Laser2.UseVisualStyleBackColor = false;
+            // 
+            // Lose1
+            // 
+            this.Lose1.Image = ((System.Drawing.Image)(resources.GetObject("Lose1.Image")));
+            this.Lose1.Location = new System.Drawing.Point(-43, -28);
+            this.Lose1.Name = "Lose1";
+            this.Lose1.Size = new System.Drawing.Size(898, 505);
+            this.Lose1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose1.TabIndex = 9;
+            this.Lose1.TabStop = false;
+            this.Lose1.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // Back
+            // 
+            this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
+            this.Back.Location = new System.Drawing.Point(252, 333);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(257, 153);
+            this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Back.TabIndex = 10;
+            this.Back.TabStop = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Back);
+            this.Controls.Add(this.Lose1);
+            this.Controls.Add(this.Laser2);
+            this.Controls.Add(this.Laser1);
             this.Controls.Add(this.RedLine1);
             this.Controls.Add(this.LeftArrow);
             this.Controls.Add(this.RightArrow);
@@ -125,6 +180,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,5 +194,9 @@
         private PictureBox RightArrow;
         private PictureBox LeftArrow;
         private Button RedLine1;
+        private Button Laser1;
+        private Button Laser2;
+        private PictureBox Lose1;
+        private PictureBox Back;
     }
 }
