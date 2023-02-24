@@ -39,6 +39,11 @@
             this.Laser2 = new System.Windows.Forms.Button();
             this.Lose1 = new System.Windows.Forms.PictureBox();
             this.Back = new System.Windows.Forms.PictureBox();
+            this.Lemon = new System.Windows.Forms.PictureBox();
+            this.Box = new System.Windows.Forms.PictureBox();
+            this.Staff = new System.Windows.Forms.PictureBox();
+            this.Bucketofwater = new System.Windows.Forms.PictureBox();
+            this.Apple = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -46,6 +51,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lemon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Staff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bucketofwater)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Apple)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -156,11 +166,69 @@
             this.Back.TabStop = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // Lemon
+            // 
+            this.Lemon.Image = ((System.Drawing.Image)(resources.GetObject("Lemon.Image")));
+            this.Lemon.Location = new System.Drawing.Point(10, 10);
+            this.Lemon.Name = "Lemon";
+            this.Lemon.Size = new System.Drawing.Size(50, 50);
+            this.Lemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lemon.TabIndex = 11;
+            this.Lemon.TabStop = false;
+            // 
+            // Box
+            // 
+            this.Box.Image = ((System.Drawing.Image)(resources.GetObject("Box.Image")));
+            this.Box.Location = new System.Drawing.Point(551, 313);
+            this.Box.Name = "Box";
+            this.Box.Size = new System.Drawing.Size(125, 108);
+            this.Box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Box.TabIndex = 12;
+            this.Box.TabStop = false;
+            this.Box.Click += new System.EventHandler(this.Box_Click);
+            // 
+            // Staff
+            // 
+            this.Staff.Image = ((System.Drawing.Image)(resources.GetObject("Staff.Image")));
+            this.Staff.Location = new System.Drawing.Point(10, 70);
+            this.Staff.Name = "Staff";
+            this.Staff.Size = new System.Drawing.Size(50, 50);
+            this.Staff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Staff.TabIndex = 13;
+            this.Staff.TabStop = false;
+            // 
+            // Bucketofwater
+            // 
+            this.Bucketofwater.Image = ((System.Drawing.Image)(resources.GetObject("Bucketofwater.Image")));
+            this.Bucketofwater.InitialImage = ((System.Drawing.Image)(resources.GetObject("Bucketofwater.InitialImage")));
+            this.Bucketofwater.Location = new System.Drawing.Point(70, 10);
+            this.Bucketofwater.Name = "Bucketofwater";
+            this.Bucketofwater.Size = new System.Drawing.Size(50, 50);
+            this.Bucketofwater.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bucketofwater.TabIndex = 14;
+            this.Bucketofwater.TabStop = false;
+            // 
+            // Apple
+            // 
+            this.Apple.Image = ((System.Drawing.Image)(resources.GetObject("Apple.Image")));
+            this.Apple.InitialImage = ((System.Drawing.Image)(resources.GetObject("Apple.InitialImage")));
+            this.Apple.Location = new System.Drawing.Point(70, 70);
+            this.Apple.Name = "Apple";
+            this.Apple.Size = new System.Drawing.Size(50, 50);
+            this.Apple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Apple.TabIndex = 15;
+            this.Apple.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Apple);
+            this.Controls.Add(this.Bucketofwater);
+            this.Controls.Add(this.Staff);
+            this.Controls.Add(this.Box);
+            this.Controls.Add(this.Lemon);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Lose1);
             this.Controls.Add(this.Laser2);
@@ -182,6 +250,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lemon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Staff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bucketofwater)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Apple)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +271,10 @@
         private Button Laser2;
         private PictureBox Lose1;
         private PictureBox Back;
+        private PictureBox Lemon;
+        private PictureBox Box;
+        private PictureBox Staff;
+        private PictureBox Bucketofwater;
+        private PictureBox Apple;
     }
 }
