@@ -24,6 +24,8 @@ namespace WinFormsApp5
         int blocked2 = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lose3.Visible = false;
+            RobinWithStaff.Visible = false;
             Lose2.Visible = false;
             timebut.Visible = false;
             Attack1.Visible = false;
@@ -141,6 +143,46 @@ namespace WinFormsApp5
 
         private async void Predator_Click(object sender, EventArgs e)
         {
+            if (but[1].Visible == true && timebut.Visible == false)
+            {
+                Button b = new Button();
+                Controls.Add(b);
+                b.BackColor = Color.Red;
+                b.Location = new Point(RedLine1.Location.X, RedLine1.Location.Y);
+                b.Width = RedLine1.Width;
+                b.Height = RedLine1.Height;
+                b.BringToFront();
+                for (int i = 0; i < 6; i++)
+                    but[i].Visible = false;
+                blocked1 = 1;
+                RobinWithStaff.Visible = true;
+                RobinWithStaff.Location = new Point(Robin.Location.X, Robin.Location.Y);
+                RobinWithStaff.Height = Robin.Height;
+                RobinWithStaff.Width = Robin.Width;
+                Robin.Visible = false;
+                for (int i = 1; i <= 27; i++)
+                {
+                    RobinWithStaff.Location = new Point(RobinWithStaff.Location.X + 5, RobinWithStaff.Location.Y);
+                    await Task.Delay(25);
+                }
+                Laser1.Visible = true;
+                Laser1.BringToFront();
+                Laser2.BringToFront();
+                Laser2.Visible = true;
+                await Task.Delay(500);
+                RobinWithStaff.Visible = false;
+                b.Visible = false;
+                Laser1.Visible = false;
+                Laser2.Visible = false;
+                await Task.Delay(1000);
+                Lose3.Visible = true;
+                Lose3.BringToFront();
+                Lose3.Location = new Point(0, 0);
+                Lose3.Height = 450;
+                Lose3.Width = 783;
+                Back.Visible = true;
+                Back.BringToFront();
+            }
             if (but[0].Visible == true)
             {
                 blocked2 = 1;
@@ -239,6 +281,14 @@ namespace WinFormsApp5
                 Laser1.Width = Laser1.Width - 140;
                 Laser2.Location = new Point(Laser2.Location.X + 140, Laser2.Location.Y);
                 Laser2.Width = Laser2.Width - 140;
+            }
+            else if(Lose3.Visible == true)
+            {
+                Back.Visible = false;
+                Lose3.Visible = false;
+                blocked1 = 0;
+                Robin.Visible = true;              
+                RobinWithStaff.Location = new Point(RobinWithStaff.Location.X - 135, RobinWithStaff.Location.Y);
             }
         }
 

@@ -47,6 +47,8 @@
             this.Attack1 = new System.Windows.Forms.PictureBox();
             this.timebut = new System.Windows.Forms.Button();
             this.Lose2 = new System.Windows.Forms.PictureBox();
+            this.RobinWithStaff = new System.Windows.Forms.PictureBox();
+            this.Lose3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -61,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Apple)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attack1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinWithStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -258,11 +262,33 @@
             this.Lose2.TabIndex = 18;
             this.Lose2.TabStop = false;
             // 
+            // RobinWithStaff
+            // 
+            this.RobinWithStaff.Image = ((System.Drawing.Image)(resources.GetObject("RobinWithStaff.Image")));
+            this.RobinWithStaff.Location = new System.Drawing.Point(469, 141);
+            this.RobinWithStaff.Name = "RobinWithStaff";
+            this.RobinWithStaff.Size = new System.Drawing.Size(125, 155);
+            this.RobinWithStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RobinWithStaff.TabIndex = 19;
+            this.RobinWithStaff.TabStop = false;
+            // 
+            // Lose3
+            // 
+            this.Lose3.Image = ((System.Drawing.Image)(resources.GetObject("Lose3.Image")));
+            this.Lose3.Location = new System.Drawing.Point(165, 113);
+            this.Lose3.Name = "Lose3";
+            this.Lose3.Size = new System.Drawing.Size(125, 62);
+            this.Lose3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose3.TabIndex = 20;
+            this.Lose3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose3);
+            this.Controls.Add(this.RobinWithStaff);
             this.Controls.Add(this.Lose2);
             this.Controls.Add(this.timebut);
             this.Controls.Add(this.Attack1);
@@ -299,6 +325,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Apple)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attack1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinWithStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,5 +351,7 @@
         private PictureBox Attack1;
         private Button timebut;
         private PictureBox Lose2;
+        private PictureBox RobinWithStaff;
+        private PictureBox Lose3;
     }
 }
