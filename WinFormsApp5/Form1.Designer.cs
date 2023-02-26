@@ -44,6 +44,9 @@
             this.Staff = new System.Windows.Forms.PictureBox();
             this.Bucketofwater = new System.Windows.Forms.PictureBox();
             this.Apple = new System.Windows.Forms.PictureBox();
+            this.Attack1 = new System.Windows.Forms.PictureBox();
+            this.timebut = new System.Windows.Forms.Button();
+            this.Lose2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -56,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Staff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bucketofwater)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Apple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Attack1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -175,6 +180,7 @@
             this.Lemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Lemon.TabIndex = 11;
             this.Lemon.TabStop = false;
+            this.Lemon.Click += new System.EventHandler(this.Lemon_Click);
             // 
             // Box
             // 
@@ -196,6 +202,7 @@
             this.Staff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Staff.TabIndex = 13;
             this.Staff.TabStop = false;
+            this.Staff.Click += new System.EventHandler(this.Staff_Click);
             // 
             // Bucketofwater
             // 
@@ -207,6 +214,7 @@
             this.Bucketofwater.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Bucketofwater.TabIndex = 14;
             this.Bucketofwater.TabStop = false;
+            this.Bucketofwater.Click += new System.EventHandler(this.Bucketofwater_Click);
             // 
             // Apple
             // 
@@ -218,12 +226,46 @@
             this.Apple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Apple.TabIndex = 15;
             this.Apple.TabStop = false;
+            this.Apple.Click += new System.EventHandler(this.Apple_Click);
+            // 
+            // Attack1
+            // 
+            this.Attack1.Image = ((System.Drawing.Image)(resources.GetObject("Attack1.Image")));
+            this.Attack1.Location = new System.Drawing.Point(645, 141);
+            this.Attack1.Name = "Attack1";
+            this.Attack1.Size = new System.Drawing.Size(125, 62);
+            this.Attack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Attack1.TabIndex = 16;
+            this.Attack1.TabStop = false;
+            // 
+            // timebut
+            // 
+            this.timebut.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timebut.Location = new System.Drawing.Point(324, 0);
+            this.timebut.Name = "timebut";
+            this.timebut.Size = new System.Drawing.Size(130, 49);
+            this.timebut.TabIndex = 17;
+            this.timebut.Text = "00:03";
+            this.timebut.UseVisualStyleBackColor = true;
+            // 
+            // Lose2
+            // 
+            this.Lose2.Image = ((System.Drawing.Image)(resources.GetObject("Lose2.Image")));
+            this.Lose2.Location = new System.Drawing.Point(551, 49);
+            this.Lose2.Name = "Lose2";
+            this.Lose2.Size = new System.Drawing.Size(125, 62);
+            this.Lose2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose2.TabIndex = 18;
+            this.Lose2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose2);
+            this.Controls.Add(this.timebut);
+            this.Controls.Add(this.Attack1);
             this.Controls.Add(this.Apple);
             this.Controls.Add(this.Bucketofwater);
             this.Controls.Add(this.Staff);
@@ -255,6 +297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Staff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bucketofwater)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Apple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Attack1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +320,8 @@
         private PictureBox Staff;
         private PictureBox Bucketofwater;
         private PictureBox Apple;
+        private PictureBox Attack1;
+        private Button timebut;
+        private PictureBox Lose2;
     }
 }
