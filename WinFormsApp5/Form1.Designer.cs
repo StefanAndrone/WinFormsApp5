@@ -49,6 +49,8 @@
             this.Lose2 = new System.Windows.Forms.PictureBox();
             this.RobinWithStaff = new System.Windows.Forms.PictureBox();
             this.Lose3 = new System.Windows.Forms.PictureBox();
+            this.Fight1 = new System.Windows.Forms.PictureBox();
+            this.Fight2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -65,6 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fight2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -282,11 +286,33 @@
             this.Lose3.TabIndex = 20;
             this.Lose3.TabStop = false;
             // 
+            // Fight1
+            // 
+            this.Fight1.Image = ((System.Drawing.Image)(resources.GetObject("Fight1.Image")));
+            this.Fight1.Location = new System.Drawing.Point(395, 197);
+            this.Fight1.Name = "Fight1";
+            this.Fight1.Size = new System.Drawing.Size(281, 184);
+            this.Fight1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Fight1.TabIndex = 21;
+            this.Fight1.TabStop = false;
+            // 
+            // Fight2
+            // 
+            this.Fight2.Image = ((System.Drawing.Image)(resources.GetObject("Fight2.Image")));
+            this.Fight2.Location = new System.Drawing.Point(446, 162);
+            this.Fight2.Name = "Fight2";
+            this.Fight2.Size = new System.Drawing.Size(252, 243);
+            this.Fight2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Fight2.TabIndex = 22;
+            this.Fight2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Fight2);
+            this.Controls.Add(this.Fight1);
             this.Controls.Add(this.Lose3);
             this.Controls.Add(this.RobinWithStaff);
             this.Controls.Add(this.Lose2);
@@ -327,6 +353,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fight2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +381,7 @@
         private PictureBox Lose2;
         private PictureBox RobinWithStaff;
         private PictureBox Lose3;
+        private PictureBox Fight1;
+        private PictureBox Fight2;
     }
 }

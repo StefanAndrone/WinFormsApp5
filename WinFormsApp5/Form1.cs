@@ -17,13 +17,19 @@ namespace WinFormsApp5
         Button inventory = new Button();
         Button[] slot = new Button[6];
         Button[] but = new Button[6];
+        Button Speak = new Button();
 
         int var;
         int box_taken = 0;
         int blocked1 = 0;
         int blocked2 = 0;
+        int defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Controls.Add(Speak);
+            Speak.BackColor = Color.Blue;
+            Speak.Visible = false;
+            Fight1.Visible = Fight2.Visible = false;
             Lose3.Visible = false;
             RobinWithStaff.Visible = false;
             Lose2.Visible = false;
@@ -143,7 +149,57 @@ namespace WinFormsApp5
 
         private async void Predator_Click(object sender, EventArgs e)
         {
-            if (but[1].Visible == true && timebut.Visible == false)
+            if (but[1].Visible == true && timebut.Visible == true)
+            {
+                but[1].Visible = but[2].Visible = but[3].Visible = false;
+                RedLine1.Visible = false;
+                blocked1 = 1;
+                RobinWithStaff.Visible = true;
+                RobinWithStaff.Location = new Point(Robin.Location.X, Robin.Location.Y);
+                RobinWithStaff.Height = Robin.Height;
+                RobinWithStaff.Width = Robin.Width;
+                Robin.Visible = false;
+                defeated = 1;
+                timebut.Visible = false;
+                for (int i = 1; i <= 42; i++)
+                {
+                    RobinWithStaff.Location = new Point(RobinWithStaff.Location.X + 5, RobinWithStaff.Location.Y);
+                    await Task.Delay(25);
+                }
+                RobinWithStaff.Visible = Predator.Visible = false;
+                for(int i = 1; i <= 3; i++)
+                {
+                    Fight1.Visible = true;
+                    await Task.Delay(500);
+                    Fight1.Visible = false;
+                    Fight2.Visible = true;
+                    await Task.Delay(500);
+                    Fight2.Visible = false;
+                }                                                              
+                RobinWithStaff.Visible = true;
+                Speak.Visible = true;
+                Speak.Location = new Point(450, 160);
+                Speak.Height = 70;
+                Speak.Width = 200;
+                Speak.BringToFront();
+                Speak.FlatStyle = FlatStyle.Flat;
+                Speak.FlatAppearance.BorderSize = 0;
+                RightArrow.Visible = false;
+                LeftArrow.Visible = false;
+                Speak.Text = "I defeated the Predator, now let's get out of here...";
+                await Task.Delay(2000);
+                Speak.Visible = false;
+                for (int i = 1; i <= 120; i++)
+                {
+                    RobinWithStaff.Location = new Point(RobinWithStaff.Location.X + 5, RobinWithStaff.Location.Y);
+                    await Task.Delay(10);
+                }
+                RightArrow.Visible = true;
+                Robin.Visible = true;
+                blocked1 = 0;
+                var = 3;
+            }
+            else if (but[1].Visible == true && timebut.Visible == false)
             {
                 Button b = new Button();
                 Controls.Add(b);
@@ -214,27 +270,31 @@ namespace WinFormsApp5
                 timebut.Text = "00:01";
                 await Task.Delay(1000);
                 but[1].Visible = but[2].Visible = but[3].Visible = false;
-                blocked1 = 1;
-                timebut.Visible = false;
-                Laser1.Visible = true;
-                Laser2.Visible = true;
-                Laser1.Location = new Point(Laser1.Location.X - 140, Laser1.Location.Y);
-                Laser1.Width = Laser1.Width + 140;
-                Laser2.Location = new Point(Laser2.Location.X - 140, Laser2.Location.Y);
-                Laser2.Width = Laser2.Width + 140;
-                await Task.Delay(500);
-                Laser1.Visible = Laser2.Visible = Robin.Visible = false;
-                await Task.Delay(1000);
-                disp(inventory, slot);
-                Apple.Visible = false;
-                Bucketofwater.Visible = false;
-                Staff.Visible = false;
-                Lose2.Location = new Point(0, 0);
-                Lose2.Height = 450;
-                Lose2.Width = 783;
-                Lose2.Visible = true;
-                Back.Visible = true;
-                Back.BringToFront();
+                if(defeated == 0)
+                {
+                    blocked1 = 1;
+                    timebut.Visible = false;
+                    Laser1.Visible = true;
+                    Laser2.Visible = true;
+                    Laser1.Location = new Point(Laser1.Location.X - 140, Laser1.Location.Y);
+                    Laser1.Width = Laser1.Width + 140;
+                    Laser2.Location = new Point(Laser2.Location.X - 140, Laser2.Location.Y);
+                    Laser2.Width = Laser2.Width + 140;
+                    await Task.Delay(500);
+                    Laser1.Visible = Laser2.Visible = Robin.Visible = false;
+                    await Task.Delay(1000);
+                    disp(inventory, slot);
+                    Apple.Visible = false;
+                    Bucketofwater.Visible = false;
+                    Staff.Visible = false;
+                    Lose2.Location = new Point(0, 0);
+                    Lose2.Height = 450;
+                    Lose2.Width = 783;
+                    Lose2.Visible = true;
+                    Back.Visible = true;
+                    Back.BringToFront();
+                }
+                
             }
         }
 
