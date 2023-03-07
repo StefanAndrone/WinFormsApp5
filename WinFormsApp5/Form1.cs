@@ -26,6 +26,10 @@ namespace WinFormsApp5
         int defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            UpArrow.Visible = false;
+            Basement1.Visible = false;
+            Hole.Visible = false;
+            MadMod.Visible = false;
             Controls.Add(Speak);
             Speak.BackColor = Color.Blue;
             Speak.Visible = false;
@@ -127,12 +131,41 @@ namespace WinFormsApp5
                Apple.Visible = false;
                Bucketofwater.Visible = false;
             }
+            else if(var == 3)
+            {
+                LeftArrow.Visible = true;
+                var = 4;
+                Hole.Visible = true;
+            }
+            else if(var == 4)
+            {
+                var = 5;
+                RightArrow.Visible = false;
+                Hole.Visible = false;
+                MadMod.Visible = true;
+            }
         }
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
             if (blocked1 == 1 || blocked2 == 1)
                 return;
+            if(var == 5)
+            {
+                var = 4;
+                RightArrow.Visible = true;
+                Hole.Visible = true;
+                MadMod.Visible = false;
+                return;
+            }
+            if(var == 4)
+            {
+                var = 3;
+                RightArrow.Visible = true;
+                Hole.Visible = false;
+                LeftArrow.Visible = false;
+                return;
+            }
             Lose1.Visible = false;
             Back.Visible = false;
             Robin.Visible = true;
@@ -198,6 +231,7 @@ namespace WinFormsApp5
                 Robin.Visible = true;
                 blocked1 = 0;
                 var = 3;
+                blocked2 = 0;
             }
             else if (but[1].Visible == true && timebut.Visible == false)
             {
@@ -447,6 +481,23 @@ namespace WinFormsApp5
             but[3].Visible = false;
             but[4].Visible = false;
             but[5].Visible = false;
+        }
+
+        private void Hole_Click(object sender, EventArgs e)
+        {
+            Basement1.Visible = true;
+            Basement1.Location = new Point(0, 0);
+            Basement1.Height = 450;
+            Basement1.Width = 783;
+            Basement1.BringToFront();       
+            UpArrow.Visible = true;
+            UpArrow.BringToFront();
+        }
+
+        private void UpArrow_Click(object sender, EventArgs e)
+        {
+            Basement1.Visible = false;
+            UpArrow.Visible = false;
         }
     }
 

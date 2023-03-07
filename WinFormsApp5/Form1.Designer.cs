@@ -51,6 +51,10 @@
             this.Lose3 = new System.Windows.Forms.PictureBox();
             this.Fight1 = new System.Windows.Forms.PictureBox();
             this.Fight2 = new System.Windows.Forms.PictureBox();
+            this.MadMod = new System.Windows.Forms.PictureBox();
+            this.Hole = new System.Windows.Forms.PictureBox();
+            this.Basement1 = new System.Windows.Forms.PictureBox();
+            this.UpArrow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -69,6 +73,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fight2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadMod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpArrow)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -306,11 +314,57 @@
             this.Fight2.TabIndex = 22;
             this.Fight2.TabStop = false;
             // 
+            // MadMod
+            // 
+            this.MadMod.Image = ((System.Drawing.Image)(resources.GetObject("MadMod.Image")));
+            this.MadMod.Location = new System.Drawing.Point(427, 173);
+            this.MadMod.Name = "MadMod";
+            this.MadMod.Size = new System.Drawing.Size(324, 240);
+            this.MadMod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MadMod.TabIndex = 23;
+            this.MadMod.TabStop = false;
+            // 
+            // Hole
+            // 
+            this.Hole.Image = ((System.Drawing.Image)(resources.GetObject("Hole.Image")));
+            this.Hole.Location = new System.Drawing.Point(309, 302);
+            this.Hole.Name = "Hole";
+            this.Hole.Size = new System.Drawing.Size(168, 83);
+            this.Hole.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hole.TabIndex = 24;
+            this.Hole.TabStop = false;
+            this.Hole.Click += new System.EventHandler(this.Hole_Click);
+            // 
+            // Basement1
+            // 
+            this.Basement1.Image = ((System.Drawing.Image)(resources.GetObject("Basement1.Image")));
+            this.Basement1.Location = new System.Drawing.Point(85, 222);
+            this.Basement1.Name = "Basement1";
+            this.Basement1.Size = new System.Drawing.Size(125, 62);
+            this.Basement1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Basement1.TabIndex = 25;
+            this.Basement1.TabStop = false;
+            // 
+            // UpArrow
+            // 
+            this.UpArrow.Image = ((System.Drawing.Image)(resources.GetObject("UpArrow.Image")));
+            this.UpArrow.Location = new System.Drawing.Point(395, 105);
+            this.UpArrow.Name = "UpArrow";
+            this.UpArrow.Size = new System.Drawing.Size(87, 62);
+            this.UpArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UpArrow.TabIndex = 26;
+            this.UpArrow.TabStop = false;
+            this.UpArrow.Click += new System.EventHandler(this.UpArrow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.UpArrow);
+            this.Controls.Add(this.Basement1);
+            this.Controls.Add(this.Hole);
+            this.Controls.Add(this.MadMod);
             this.Controls.Add(this.Fight2);
             this.Controls.Add(this.Fight1);
             this.Controls.Add(this.Lose3);
@@ -355,6 +409,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fight2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadMod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpArrow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,5 +441,9 @@
         private PictureBox Lose3;
         private PictureBox Fight1;
         private PictureBox Fight2;
+        private PictureBox MadMod;
+        private PictureBox Hole;
+        private PictureBox Basement1;
+        private PictureBox UpArrow;
     }
 }
