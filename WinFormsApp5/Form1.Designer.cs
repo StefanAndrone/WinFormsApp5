@@ -55,6 +55,13 @@
             this.Hole = new System.Windows.Forms.PictureBox();
             this.Basement1 = new System.Windows.Forms.PictureBox();
             this.UpArrow = new System.Windows.Forms.PictureBox();
+            this.Ladder = new System.Windows.Forms.PictureBox();
+            this.Basement2 = new System.Windows.Forms.PictureBox();
+            this.RightArrow2 = new System.Windows.Forms.PictureBox();
+            this.LeftArrow2 = new System.Windows.Forms.PictureBox();
+            this.MadModLaser = new System.Windows.Forms.PictureBox();
+            this.B = new System.Windows.Forms.Button();
+            this.Lose4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -77,6 +84,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Hole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ladder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftArrow2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -356,11 +369,92 @@
             this.UpArrow.TabStop = false;
             this.UpArrow.Click += new System.EventHandler(this.UpArrow_Click);
             // 
+            // Ladder
+            // 
+            this.Ladder.Image = ((System.Drawing.Image)(resources.GetObject("Ladder.Image")));
+            this.Ladder.Location = new System.Drawing.Point(273, 0);
+            this.Ladder.Name = "Ladder";
+            this.Ladder.Size = new System.Drawing.Size(125, 315);
+            this.Ladder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ladder.TabIndex = 27;
+            this.Ladder.TabStop = false;
+            // 
+            // Basement2
+            // 
+            this.Basement2.Image = ((System.Drawing.Image)(resources.GetObject("Basement2.Image")));
+            this.Basement2.Location = new System.Drawing.Point(626, 23);
+            this.Basement2.Name = "Basement2";
+            this.Basement2.Size = new System.Drawing.Size(125, 62);
+            this.Basement2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Basement2.TabIndex = 28;
+            this.Basement2.TabStop = false;
+            // 
+            // RightArrow2
+            // 
+            this.RightArrow2.Image = ((System.Drawing.Image)(resources.GetObject("RightArrow2.Image")));
+            this.RightArrow2.Location = new System.Drawing.Point(660, 327);
+            this.RightArrow2.Name = "RightArrow2";
+            this.RightArrow2.Size = new System.Drawing.Size(89, 41);
+            this.RightArrow2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightArrow2.TabIndex = 29;
+            this.RightArrow2.TabStop = false;
+            this.RightArrow2.Click += new System.EventHandler(this.RightArrow2_Click);
+            // 
+            // LeftArrow2
+            // 
+            this.LeftArrow2.Image = ((System.Drawing.Image)(resources.GetObject("LeftArrow2.Image")));
+            this.LeftArrow2.Location = new System.Drawing.Point(34, 327);
+            this.LeftArrow2.Name = "LeftArrow2";
+            this.LeftArrow2.Size = new System.Drawing.Size(92, 41);
+            this.LeftArrow2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LeftArrow2.TabIndex = 30;
+            this.LeftArrow2.TabStop = false;
+            this.LeftArrow2.Click += new System.EventHandler(this.LeftArrow2_Click);
+            // 
+            // MadModLaser
+            // 
+            this.MadModLaser.Image = ((System.Drawing.Image)(resources.GetObject("MadModLaser.Image")));
+            this.MadModLaser.Location = new System.Drawing.Point(350, 186);
+            this.MadModLaser.Name = "MadModLaser";
+            this.MadModLaser.Size = new System.Drawing.Size(118, 181);
+            this.MadModLaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MadModLaser.TabIndex = 31;
+            this.MadModLaser.TabStop = false;
+            // 
+            // B
+            // 
+            this.B.BackColor = System.Drawing.Color.Red;
+            this.B.FlatAppearance.BorderSize = 0;
+            this.B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B.ForeColor = System.Drawing.Color.Red;
+            this.B.Location = new System.Drawing.Point(-7, 209);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(419, 38);
+            this.B.TabIndex = 32;
+            this.B.UseVisualStyleBackColor = false;
+            // 
+            // Lose4
+            // 
+            this.Lose4.Image = ((System.Drawing.Image)(resources.GetObject("Lose4.Image")));
+            this.Lose4.Location = new System.Drawing.Point(0, 0);
+            this.Lose4.Name = "Lose4";
+            this.Lose4.Size = new System.Drawing.Size(125, 62);
+            this.Lose4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose4.TabIndex = 33;
+            this.Lose4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose4);
+            this.Controls.Add(this.B);
+            this.Controls.Add(this.MadModLaser);
+            this.Controls.Add(this.LeftArrow2);
+            this.Controls.Add(this.RightArrow2);
+            this.Controls.Add(this.Basement2);
+            this.Controls.Add(this.Ladder);
             this.Controls.Add(this.UpArrow);
             this.Controls.Add(this.Basement1);
             this.Controls.Add(this.Hole);
@@ -413,6 +507,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Hole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ladder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftArrow2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,5 +545,12 @@
         private PictureBox Hole;
         private PictureBox Basement1;
         private PictureBox UpArrow;
+        private PictureBox Ladder;
+        private PictureBox Basement2;
+        private PictureBox RightArrow2;
+        private PictureBox LeftArrow2;
+        private PictureBox MadModLaser;
+        private Button B;
+        private PictureBox Lose4;
     }
 }

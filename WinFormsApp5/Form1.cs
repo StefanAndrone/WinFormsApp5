@@ -26,6 +26,13 @@ namespace WinFormsApp5
         int defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lose4.Visible = false;
+            B.Visible = false;
+            MadModLaser.Visible = false;
+            LeftArrow2.Visible = false;
+            RightArrow2.Visible = false;
+            Basement2.Visible = false;
+            Ladder.Visible = false;
             UpArrow.Visible = false;
             Basement1.Visible = false;
             Hole.Visible = false;
@@ -139,11 +146,27 @@ namespace WinFormsApp5
             }
             else if(var == 4)
             {
+                for (int i = 0; i < 6; i++)
+                    but[i].Visible = false;
+                blocked1 = 1;
                 var = 5;
                 RightArrow.Visible = false;
                 Hole.Visible = false;
                 MadMod.Visible = true;
-            }
+                MadModLaser.Visible = true;
+                await Task.Delay(500);
+                B.Visible = true;
+                await Task.Delay(500);
+                Robin.Visible = false;
+                B.Visible = false;
+                await Task.Delay(1000);
+                Lose4.Visible = true;
+                Lose4.Height = 450;
+                Lose4.Width = 783;
+                Lose4.BringToFront();
+                Back.Visible = true;
+                Back.BringToFront();
+            }          
         }
 
         private void LeftArrow_Click(object sender, EventArgs e)
@@ -384,6 +407,17 @@ namespace WinFormsApp5
                 Robin.Visible = true;              
                 RobinWithStaff.Location = new Point(RobinWithStaff.Location.X - 135, RobinWithStaff.Location.Y);
             }
+            else if(Lose4.Visible == true)
+            {
+                Lose4.Visible = false;
+                Back.Visible = false;
+                blocked1 = 0;
+                var = 4;
+                RightArrow.Visible = true;
+                Hole.Visible = true;
+                MadMod.Visible = MadModLaser.Visible = false;
+                Robin.Visible = true;                
+            }
         }
 
         private void swap_pictures(PictureBox p1, PictureBox p2)
@@ -489,15 +523,46 @@ namespace WinFormsApp5
             Basement1.Location = new Point(0, 0);
             Basement1.Height = 450;
             Basement1.Width = 783;
-            Basement1.BringToFront();       
+            //Basement1.BringToFront();       
             UpArrow.Visible = true;
             UpArrow.BringToFront();
+            Ladder.Visible = true;
+            Ladder.BringToFront();
+            RightArrow2.Visible = true;
+            RightArrow2.BringToFront();
+            
         }
 
         private void UpArrow_Click(object sender, EventArgs e)
         {
             Basement1.Visible = false;
             UpArrow.Visible = false;
+            Ladder.Visible = false;
+            RightArrow2.Visible = false;
+            RightArrow.Visible = true;
+        }
+
+        private void RightArrow2_Click(object sender, EventArgs e)
+        {
+            Basement2.Visible = true;
+            //Basement2.BringToFront();
+            UpArrow.Visible = false;
+            Ladder.Visible = RightArrow2.Visible = false;
+            Basement2.Height = 450;
+            Basement2.Width = 783;
+            Basement2.Location = new Point(0, 0);
+            RightArrow.Visible = false;
+            LeftArrow2.Visible = true;
+            LeftArrow2.BringToFront();
+        }
+
+        private void LeftArrow2_Click(object sender, EventArgs e)
+        {
+            UpArrow.Visible = true;
+            Ladder.Visible = RightArrow2.Visible = true;
+            Basement2.Visible = false;
+            LeftArrow2.Visible = false;
+            RightArrow2.Visible = true;
         }
     }
 
