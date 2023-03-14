@@ -24,8 +24,10 @@ namespace WinFormsApp5
         int blocked1 = 0;
         int blocked2 = 0;
         int defeated = 0;
+        int i_can_combine_staff_with_apple = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox2.Location = new Point(10000, 10000);
             Lose4.Visible = false;
             B.Visible = false;
             MadModLaser.Visible = false;
@@ -255,6 +257,7 @@ namespace WinFormsApp5
                 blocked1 = 0;
                 var = 3;
                 blocked2 = 0;
+                i_can_combine_staff_with_apple = 1;
             }
             else if (but[1].Visible == true && timebut.Visible == false)
             {
@@ -330,6 +333,7 @@ namespace WinFormsApp5
                 if(defeated == 0)
                 {
                     blocked1 = 1;
+                    Speak.Visible = false;
                     timebut.Visible = false;
                     Laser1.Visible = true;
                     Laser2.Visible = true;
@@ -504,17 +508,44 @@ namespace WinFormsApp5
             but[5].Visible = false;
         }
 
-        private void Staff_Click(object sender, EventArgs e)
+        private async void Staff_Click(object sender, EventArgs e)
         {
             if (blocked1 == 1)
                 return;
-            but[1].Visible = true;
-            Staff.BringToFront();
-            but[2].Visible = false;
-            but[0].Visible = false;
-            but[3].Visible = false;
-            but[4].Visible = false;
-            but[5].Visible = false;
+            if (but[3].Visible == true)
+            {
+                if (i_can_combine_staff_with_apple == 1)
+                {
+                    Staff.Image = pictureBox2.Image;
+                    Apple.Visible = false;
+                    but[3].Visible = false;
+                }
+                else
+                {
+                    blocked1 = 1;
+                    Speak.Visible = true;
+                    Speak.Location = new Point(250, 160);
+                    Speak.Height = 70;
+                    Speak.Width = 200;
+                    Speak.BringToFront();
+                    Speak.FlatStyle = FlatStyle.Flat;
+                    Speak.FlatAppearance.BorderSize = 0;
+                    Speak.Text = "I should combine these objects, but not yet";
+                    await Task.Delay(1500);
+                    Speak.Visible = false;
+                    blocked1 = 0;
+                }
+            }
+            else
+            {
+                but[1].Visible = true;
+                Staff.BringToFront();
+                but[2].Visible = false;
+                but[0].Visible = false;
+                but[3].Visible = false;
+                but[4].Visible = false;
+                but[5].Visible = false;
+            }         
         }
 
         private void Hole_Click(object sender, EventArgs e)

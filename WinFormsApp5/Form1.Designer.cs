@@ -62,6 +62,7 @@
             this.MadModLaser = new System.Windows.Forms.PictureBox();
             this.B = new System.Windows.Forms.Button();
             this.Lose4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -443,11 +445,22 @@
             this.Lose4.TabIndex = 33;
             this.Lose4.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(624, 209);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Lose4);
             this.Controls.Add(this.B);
             this.Controls.Add(this.MadModLaser);
@@ -513,6 +526,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,5 +566,6 @@
         private PictureBox MadModLaser;
         private Button B;
         private PictureBox Lose4;
+        private PictureBox pictureBox2;
     }
 }
