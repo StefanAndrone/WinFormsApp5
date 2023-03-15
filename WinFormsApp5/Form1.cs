@@ -25,8 +25,27 @@ namespace WinFormsApp5
         int blocked2 = 0;
         int defeated = 0;
         int i_can_combine_staff_with_apple = 0;
+        int door_unlocked = 0;
+        string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            RightArrow3.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible= false;
+            button5.Visible= false;
+            button6.Visible= false;
+            button7.Visible= false;
+            button8.Visible= false;
+            button9.Visible= false;
+            button10.Visible= false;
+            button11.Visible= false;
+            button12.Visible= false;
+            button13.Visible= false;
+            Back2.Visible = false;
+            Keypad.Visible = false;
+            Keypad2.Visible = false;
             pictureBox2.Location = new Point(10000, 10000);
             Lose4.Visible = false;
             B.Visible = false;
@@ -585,6 +604,9 @@ namespace WinFormsApp5
             RightArrow.Visible = false;
             LeftArrow2.Visible = true;
             LeftArrow2.BringToFront();
+            Keypad.Visible = true;
+            if (door_unlocked == 1)
+                RightArrow3.Visible = true;
         }
 
         private void LeftArrow2_Click(object sender, EventArgs e)
@@ -594,6 +616,166 @@ namespace WinFormsApp5
             Basement2.Visible = false;
             LeftArrow2.Visible = false;
             RightArrow2.Visible = true;
+            Keypad.Visible = false;
+            RightArrow3.Visible = false;
+        }
+
+        private void Keypad_Click(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+            button5.Visible = true;
+            button6.Visible = true;
+            button7.Visible = true;
+            button8.Visible = true;
+            button9.Visible = true;
+            button10.Visible = true;
+            button11.Visible = true;
+            button12.Visible = true;
+            button13.Visible = true;
+            Back2.Visible = true;
+            Keypad2.Visible = true;
+            Keypad2.BringToFront();
+            button1.BringToFront();
+            button2.BringToFront();
+            button3.BringToFront();
+            button4.BringToFront();
+            button5.BringToFront();
+            button6.BringToFront();
+            button7.BringToFront();
+            button8.BringToFront();
+            button9.BringToFront();
+            button10.BringToFront();
+            button11.BringToFront();
+            button12.BringToFront();
+            button13.BringToFront();
+            Back2.BringToFront();
+            s = "Enter 8 digits";
+            button1.Text = s;
+            s = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            s = s + "3";
+            button1.Text = s;
+        }
+
+        private void Back2_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button13.Visible = false;
+            Back2.Visible = false;
+            Keypad2.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            s = s + "2";
+            button1.Text = s;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            s = s + "1";
+            button1.Text = s;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            s = s + "4";
+            button1.Text = s;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            s = s + "5";
+            button1.Text = s;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            s = s + "6";
+            button1.Text = s;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            s = s + "7";
+            button1.Text = s;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            s = s + "8";
+            button1.Text = s;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            s = s + "9";
+            button1.Text = s;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            s = s + "0";
+            button1.Text = s;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            s = "";
+            button1.Text = s;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (s != "31415926")
+            {
+                s = "";
+                button1.Text = s;
+            }
+            else
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button7.Visible = false;
+                button8.Visible = false;
+                button9.Visible = false;
+                button10.Visible = false;
+                button11.Visible = false;
+                button12.Visible = false;
+                button13.Visible = false;
+                Back2.Visible = false;
+                Keypad2.Visible = false;
+                Basement2.Image = pictureBox3.Image;
+                Keypad.Dispose();
+                RightArrow3.Visible = true;
+                door_unlocked = 1;
+            }
         }
     }
 

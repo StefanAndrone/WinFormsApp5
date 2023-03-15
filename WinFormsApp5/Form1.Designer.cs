@@ -63,6 +63,24 @@
             this.B = new System.Windows.Forms.Button();
             this.Lose4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Keypad = new System.Windows.Forms.PictureBox();
+            this.Keypad2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.Back2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.RightArrow3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -92,6 +110,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keypad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keypad2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -455,11 +478,211 @@
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
             // 
+            // Keypad
+            // 
+            this.Keypad.Image = ((System.Drawing.Image)(resources.GetObject("Keypad.Image")));
+            this.Keypad.Location = new System.Drawing.Point(704, 183);
+            this.Keypad.Name = "Keypad";
+            this.Keypad.Size = new System.Drawing.Size(79, 62);
+            this.Keypad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Keypad.TabIndex = 35;
+            this.Keypad.TabStop = false;
+            this.Keypad.Click += new System.EventHandler(this.Keypad_Click);
+            // 
+            // Keypad2
+            // 
+            this.Keypad2.Image = ((System.Drawing.Image)(resources.GetObject("Keypad2.Image")));
+            this.Keypad2.Location = new System.Drawing.Point(0, 0);
+            this.Keypad2.Name = "Keypad2";
+            this.Keypad2.Size = new System.Drawing.Size(783, 456);
+            this.Keypad2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Keypad2.TabIndex = 36;
+            this.Keypad2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(273, 91);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(286, 44);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Enter 8 digits";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(273, 151);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 29);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "1";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(382, 151);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 29);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "2";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(488, 151);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(81, 29);
+            this.button4.TabIndex = 40;
+            this.button4.Text = "3";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(273, 214);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 29);
+            this.button5.TabIndex = 41;
+            this.button5.Text = "4";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(382, 214);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(81, 29);
+            this.button6.TabIndex = 42;
+            this.button6.Text = "5";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(488, 214);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(81, 29);
+            this.button7.TabIndex = 43;
+            this.button7.Text = "6";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(273, 276);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(81, 29);
+            this.button8.TabIndex = 44;
+            this.button8.Text = "7";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(382, 276);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(81, 29);
+            this.button9.TabIndex = 45;
+            this.button9.Text = "8";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(488, 276);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(81, 29);
+            this.button10.TabIndex = 46;
+            this.button10.Text = "9";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(273, 338);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(81, 29);
+            this.button11.TabIndex = 47;
+            this.button11.Text = "Clear";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(382, 338);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(81, 29);
+            this.button12.TabIndex = 48;
+            this.button12.Text = "0";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(488, 338);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(81, 29);
+            this.button13.TabIndex = 49;
+            this.button13.Text = "OK";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // Back2
+            // 
+            this.Back2.Image = ((System.Drawing.Image)(resources.GetObject("Back2.Image")));
+            this.Back2.Location = new System.Drawing.Point(343, 411);
+            this.Back2.Name = "Back2";
+            this.Back2.Size = new System.Drawing.Size(125, 62);
+            this.Back2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Back2.TabIndex = 50;
+            this.Back2.TabStop = false;
+            this.Back2.Click += new System.EventHandler(this.Back2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(10000, 10000);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 51;
+            this.pictureBox3.TabStop = false;
+            // 
+            // RightArrow3
+            // 
+            this.RightArrow3.Image = ((System.Drawing.Image)(resources.GetObject("RightArrow3.Image")));
+            this.RightArrow3.Location = new System.Drawing.Point(574, 284);
+            this.RightArrow3.Name = "RightArrow3";
+            this.RightArrow3.Size = new System.Drawing.Size(96, 43);
+            this.RightArrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightArrow3.TabIndex = 52;
+            this.RightArrow3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.RightArrow3);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Back2);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Keypad2);
+            this.Controls.Add(this.Keypad);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Lose4);
             this.Controls.Add(this.B);
@@ -527,6 +750,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.MadModLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keypad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keypad2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -567,5 +795,23 @@
         private Button B;
         private PictureBox Lose4;
         private PictureBox pictureBox2;
+        private PictureBox Keypad;
+        private PictureBox Keypad2;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
+        private Button button11;
+        private Button button12;
+        private Button button13;
+        private PictureBox Back2;
+        private PictureBox pictureBox3;
+        private PictureBox RightArrow3;
     }
 }
