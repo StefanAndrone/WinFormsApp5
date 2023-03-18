@@ -29,6 +29,9 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lose5.Visible = false;
+            Image1.Visible = false;
+            Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
             RightArrow3.Visible = false;
             button1.Visible = false;
             button2.Visible = false;
@@ -441,6 +444,13 @@ namespace WinFormsApp5
                 MadMod.Visible = MadModLaser.Visible = false;
                 Robin.Visible = true;                
             }
+            else if(Lose5.Visible == true)
+            {
+                blocked1 = 0;
+                Robin2.Location = new Point(Robin2.Location.X - 110, Robin2.Location.Y);
+                Robin2.Visible = true;
+                Lose5.Visible = Back.Visible = false;
+            }
         }
 
         private void swap_pictures(PictureBox p1, PictureBox p2)
@@ -775,6 +785,44 @@ namespace WinFormsApp5
                 Keypad.Dispose();
                 RightArrow3.Visible = true;
                 door_unlocked = 1;
+            }
+        }
+
+        private void RightArrow3_Click(object sender, EventArgs e)
+        {
+            Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = true;
+            LeftArrow2.Visible = false;
+        }
+
+        private void LeftArrow3_Click(object sender, EventArgs e)
+        {
+            if (blocked1 == 0)
+            {
+                Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
+                LeftArrow2.Visible = true;
+            }
+        }
+
+        private async void Button_Click(object sender, EventArgs e)
+        {
+            if (blocked1 == 0)
+            {
+                blocked1 = 1;
+                for (int i = 0; i < 6; i++)
+                    but[i].Visible = false;
+                for (int i = 1; i <= 22; i++)
+                {
+                    Robin2.Location = new Point(Robin2.Location.X + 5, Robin2.Location.Y);
+                    await Task.Delay(25);
+                }
+                Image1.Visible = true;
+                await Task.Delay(750);
+                Image1.Visible = Robin2.Visible = false;
+                await Task.Delay(750);
+                Lose5.Visible = true;
+                Lose5.BringToFront();
+                Back.Visible = true;
+                Back.BringToFront();
             }
         }
     }

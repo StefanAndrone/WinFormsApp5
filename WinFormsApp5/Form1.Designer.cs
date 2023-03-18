@@ -81,6 +81,14 @@
             this.Back2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.RightArrow3 = new System.Windows.Forms.PictureBox();
+            this.Basement4 = new System.Windows.Forms.PictureBox();
+            this.LeftArrow3 = new System.Windows.Forms.PictureBox();
+            this.LaserBasement = new System.Windows.Forms.PictureBox();
+            this.Button = new System.Windows.Forms.PictureBox();
+            this.Robin2 = new System.Windows.Forms.PictureBox();
+            this.RedLine2 = new System.Windows.Forms.Button();
+            this.Image1 = new System.Windows.Forms.PictureBox();
+            this.Lose5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -115,6 +123,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftArrow3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaserBasement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Robin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -659,12 +674,103 @@
             this.RightArrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RightArrow3.TabIndex = 52;
             this.RightArrow3.TabStop = false;
+            this.RightArrow3.Click += new System.EventHandler(this.RightArrow3_Click);
+            // 
+            // Basement4
+            // 
+            this.Basement4.Image = ((System.Drawing.Image)(resources.GetObject("Basement4.Image")));
+            this.Basement4.Location = new System.Drawing.Point(0, 0);
+            this.Basement4.Name = "Basement4";
+            this.Basement4.Size = new System.Drawing.Size(783, 456);
+            this.Basement4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Basement4.TabIndex = 53;
+            this.Basement4.TabStop = false;
+            // 
+            // LeftArrow3
+            // 
+            this.LeftArrow3.Image = ((System.Drawing.Image)(resources.GetObject("LeftArrow3.Image")));
+            this.LeftArrow3.Location = new System.Drawing.Point(51, 319);
+            this.LeftArrow3.Name = "LeftArrow3";
+            this.LeftArrow3.Size = new System.Drawing.Size(115, 39);
+            this.LeftArrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LeftArrow3.TabIndex = 54;
+            this.LeftArrow3.TabStop = false;
+            this.LeftArrow3.Click += new System.EventHandler(this.LeftArrow3_Click);
+            // 
+            // LaserBasement
+            // 
+            this.LaserBasement.Image = ((System.Drawing.Image)(resources.GetObject("LaserBasement.Image")));
+            this.LaserBasement.Location = new System.Drawing.Point(645, 82);
+            this.LaserBasement.Name = "LaserBasement";
+            this.LaserBasement.Size = new System.Drawing.Size(125, 62);
+            this.LaserBasement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LaserBasement.TabIndex = 55;
+            this.LaserBasement.TabStop = false;
+            // 
+            // Button
+            // 
+            this.Button.Image = ((System.Drawing.Image)(resources.GetObject("Button.Image")));
+            this.Button.Location = new System.Drawing.Point(669, 183);
+            this.Button.Name = "Button";
+            this.Button.Size = new System.Drawing.Size(53, 37);
+            this.Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Button.TabIndex = 56;
+            this.Button.TabStop = false;
+            this.Button.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // Robin2
+            // 
+            this.Robin2.Image = ((System.Drawing.Image)(resources.GetObject("Robin2.Image")));
+            this.Robin2.Location = new System.Drawing.Point(178, 167);
+            this.Robin2.Name = "Robin2";
+            this.Robin2.Size = new System.Drawing.Size(125, 226);
+            this.Robin2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Robin2.TabIndex = 57;
+            this.Robin2.TabStop = false;
+            // 
+            // RedLine2
+            // 
+            this.RedLine2.BackColor = System.Drawing.Color.Red;
+            this.RedLine2.Location = new System.Drawing.Point(383, 286);
+            this.RedLine2.Name = "RedLine2";
+            this.RedLine2.Size = new System.Drawing.Size(3, 180);
+            this.RedLine2.TabIndex = 58;
+            this.RedLine2.Text = "button14";
+            this.RedLine2.UseVisualStyleBackColor = false;
+            // 
+            // Image1
+            // 
+            this.Image1.Image = ((System.Drawing.Image)(resources.GetObject("Image1.Image")));
+            this.Image1.Location = new System.Drawing.Point(306, 0);
+            this.Image1.Name = "Image1";
+            this.Image1.Size = new System.Drawing.Size(477, 456);
+            this.Image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image1.TabIndex = 59;
+            this.Image1.TabStop = false;
+            // 
+            // Lose5
+            // 
+            this.Lose5.Image = ((System.Drawing.Image)(resources.GetObject("Lose5.Image")));
+            this.Lose5.Location = new System.Drawing.Point(0, 0);
+            this.Lose5.Name = "Lose5";
+            this.Lose5.Size = new System.Drawing.Size(783, 456);
+            this.Lose5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose5.TabIndex = 60;
+            this.Lose5.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose5);
+            this.Controls.Add(this.Image1);
+            this.Controls.Add(this.RedLine2);
+            this.Controls.Add(this.Robin2);
+            this.Controls.Add(this.Button);
+            this.Controls.Add(this.LaserBasement);
+            this.Controls.Add(this.LeftArrow3);
+            this.Controls.Add(this.Basement4);
             this.Controls.Add(this.RightArrow3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Back2);
@@ -755,6 +861,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftArrow3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaserBasement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Robin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -813,5 +926,13 @@
         private PictureBox Back2;
         private PictureBox pictureBox3;
         private PictureBox RightArrow3;
+        private PictureBox Basement4;
+        private PictureBox LeftArrow3;
+        private PictureBox LaserBasement;
+        private PictureBox Button;
+        private PictureBox Robin2;
+        private Button RedLine2;
+        private PictureBox Image1;
+        private PictureBox Lose5;
     }
 }
