@@ -25,7 +25,9 @@ namespace WinFormsApp5
         int blocked2 = 0;
         int defeated = 0;
         int i_can_combine_staff_with_apple = 0;
+        int i_combined_staff_with_apple = 0;
         int door_unlocked = 0;
+        int i_defeated_laser = 0;
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,16 +38,16 @@ namespace WinFormsApp5
             button1.Visible = false;
             button2.Visible = false;
             button3.Visible = false;
-            button4.Visible= false;
-            button5.Visible= false;
-            button6.Visible= false;
-            button7.Visible= false;
-            button8.Visible= false;
-            button9.Visible= false;
-            button10.Visible= false;
-            button11.Visible= false;
-            button12.Visible= false;
-            button13.Visible= false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button13.Visible = false;
             Back2.Visible = false;
             Keypad.Visible = false;
             Keypad2.Visible = false;
@@ -80,10 +82,10 @@ namespace WinFormsApp5
             inventory.Height = 130;
             inventory.Width = 190;
             inventory.BackColor = Color.Brown;
-            inventory.BringToFront();             
+            inventory.BringToFront();
             inventory.FlatStyle = FlatStyle.Flat;
             inventory.FlatAppearance.BorderSize = 0;
-            
+
             for (int i = 0; i < 6; i++)
             {
                 slot[i] = new Button();
@@ -107,17 +109,17 @@ namespace WinFormsApp5
                 but[i].FlatAppearance.BorderSize = 0;
                 but[i].BringToFront();
                 but[i].Visible = false;
-            }            
+            }
             Lose1.Visible = false;
             Back.Visible = false;
             Robin.Visible = true;
             Predator.Visible = false;
             LeftArrow.Visible = false;
             RightArrow.Visible = true;
-            RedLine1.Visible= false;
+            RedLine1.Visible = false;
             Laser1.Visible = false;
             Laser2.Visible = false;
-            var = 1;           
+            var = 1;
         }
         private async void RightArrow_Click(object sender, EventArgs e)
         {
@@ -136,39 +138,39 @@ namespace WinFormsApp5
                 Laser1.Visible = false;
                 Laser2.Visible = false;
             }
-            else if(var == 2)
+            else if (var == 2)
             {
-               blocked1 = 1;
-               for (int i = 0; i <= 5; i++)
-                   but[i].Visible = false;
-               for (int i = 1; i <= 27; i++)
-               {
+                blocked1 = 1;
+                for (int i = 0; i <= 5; i++)
+                    but[i].Visible = false;
+                for (int i = 1; i <= 27; i++)
+                {
                     Robin.Location = new Point(Robin.Location.X + 5, Robin.Location.Y);
                     await Task.Delay(25);
-               }               
-               Laser1.Visible = true;
-               Laser2.Visible = true;
-               await Task.Delay(500);
-               Robin.Visible = false;
-               Laser1.Visible = false;
-               Laser2.Visible = false;
-               await Task.Delay(1000);
-               Lose1.Visible = true;
-               Back.Visible = true;
-               Robin.Location = new Point(Robin.Location.X - 135, Robin.Location.Y);
-               disp(inventory, slot);
-               Lemon.Visible = false;
-               Staff.Visible = false;
-               Apple.Visible = false;
-               Bucketofwater.Visible = false;
+                }
+                Laser1.Visible = true;
+                Laser2.Visible = true;
+                await Task.Delay(500);
+                Robin.Visible = false;
+                Laser1.Visible = false;
+                Laser2.Visible = false;
+                await Task.Delay(1000);
+                Lose1.Visible = true;
+                Back.Visible = true;
+                Robin.Location = new Point(Robin.Location.X - 135, Robin.Location.Y);
+                disp(inventory, slot);
+                Lemon.Visible = false;
+                Staff.Visible = false;
+                Apple.Visible = false;
+                Bucketofwater.Visible = false;
             }
-            else if(var == 3)
+            else if (var == 3)
             {
                 LeftArrow.Visible = true;
                 var = 4;
                 Hole.Visible = true;
             }
-            else if(var == 4)
+            else if (var == 4)
             {
                 for (int i = 0; i < 6; i++)
                     but[i].Visible = false;
@@ -190,14 +192,14 @@ namespace WinFormsApp5
                 Lose4.BringToFront();
                 Back.Visible = true;
                 Back.BringToFront();
-            }          
+            }
         }
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
             if (blocked1 == 1 || blocked2 == 1)
                 return;
-            if(var == 5)
+            if (var == 5)
             {
                 var = 4;
                 RightArrow.Visible = true;
@@ -205,7 +207,7 @@ namespace WinFormsApp5
                 MadMod.Visible = false;
                 return;
             }
-            if(var == 4)
+            if (var == 4)
             {
                 var = 3;
                 RightArrow.Visible = true;
@@ -247,7 +249,7 @@ namespace WinFormsApp5
                     await Task.Delay(25);
                 }
                 RobinWithStaff.Visible = Predator.Visible = false;
-                for(int i = 1; i <= 3; i++)
+                for (int i = 1; i <= 3; i++)
                 {
                     Fight1.Visible = true;
                     await Task.Delay(500);
@@ -255,7 +257,7 @@ namespace WinFormsApp5
                     Fight2.Visible = true;
                     await Task.Delay(500);
                     Fight2.Visible = false;
-                }                                                              
+                }
                 RobinWithStaff.Visible = true;
                 Speak.Visible = true;
                 Speak.Location = new Point(450, 160);
@@ -352,7 +354,7 @@ namespace WinFormsApp5
                 timebut.Text = "00:01";
                 await Task.Delay(1000);
                 but[1].Visible = but[2].Visible = but[3].Visible = false;
-                if(defeated == 0)
+                if (defeated == 0)
                 {
                     blocked1 = 1;
                     Speak.Visible = false;
@@ -377,7 +379,7 @@ namespace WinFormsApp5
                     Back.Visible = true;
                     Back.BringToFront();
                 }
-                
+
             }
         }
 
@@ -388,7 +390,7 @@ namespace WinFormsApp5
 
         private void Back_Click(object sender, EventArgs e)
         {
-            if(Lose1.Visible == true)
+            if (Lose1.Visible == true)
             {
                 blocked1 = 0;
                 Lose1.Visible = Back.Visible = false;
@@ -402,7 +404,7 @@ namespace WinFormsApp5
                     Bucketofwater.Visible = true;
                 }
             }
-            else if(Lose2.Visible == true)
+            else if (Lose2.Visible == true)
             {
                 swap_pictures(Lemon, Apple);
                 swap_pictures(Lemon, Bucketofwater);
@@ -425,15 +427,15 @@ namespace WinFormsApp5
                 Laser2.Location = new Point(Laser2.Location.X + 140, Laser2.Location.Y);
                 Laser2.Width = Laser2.Width - 140;
             }
-            else if(Lose3.Visible == true)
+            else if (Lose3.Visible == true)
             {
                 Back.Visible = false;
                 Lose3.Visible = false;
                 blocked1 = 0;
-                Robin.Visible = true;              
+                Robin.Visible = true;
                 RobinWithStaff.Location = new Point(RobinWithStaff.Location.X - 135, RobinWithStaff.Location.Y);
             }
-            else if(Lose4.Visible == true)
+            else if (Lose4.Visible == true)
             {
                 Lose4.Visible = false;
                 Back.Visible = false;
@@ -442,9 +444,9 @@ namespace WinFormsApp5
                 RightArrow.Visible = true;
                 Hole.Visible = true;
                 MadMod.Visible = MadModLaser.Visible = false;
-                Robin.Visible = true;                
+                Robin.Visible = true;
             }
-            else if(Lose5.Visible == true)
+            else if (Lose5.Visible == true)
             {
                 blocked1 = 0;
                 Robin2.Location = new Point(Robin2.Location.X - 110, Robin2.Location.Y);
@@ -454,9 +456,9 @@ namespace WinFormsApp5
         }
 
         private void swap_pictures(PictureBox p1, PictureBox p2)
-        {         
+        {
             Point aux = new Point();
-            aux.X = p1.Location.X;            
+            aux.X = p1.Location.X;
             aux.Y = p1.Location.Y;
             p1.Location = new Point(p2.Location.X, p2.Location.Y);
             p2.Location = new Point(aux.X, aux.Y);
@@ -497,7 +499,7 @@ namespace WinFormsApp5
             Bucketofwater.Visible = true;
             Bucketofwater.BringToFront();
         }
-        
+
         private void Lemon_Click(object sender, EventArgs e)
         {
             if (blocked1 == 1)
@@ -546,6 +548,7 @@ namespace WinFormsApp5
                 if (i_can_combine_staff_with_apple == 1)
                 {
                     Staff.Image = pictureBox2.Image;
+                    i_combined_staff_with_apple = 1;
                     Apple.Visible = false;
                     but[3].Visible = false;
                 }
@@ -574,7 +577,7 @@ namespace WinFormsApp5
                 but[3].Visible = false;
                 but[4].Visible = false;
                 but[5].Visible = false;
-            }         
+            }
         }
 
         private void Hole_Click(object sender, EventArgs e)
@@ -590,7 +593,7 @@ namespace WinFormsApp5
             Ladder.BringToFront();
             RightArrow2.Visible = true;
             RightArrow2.BringToFront();
-            
+
         }
 
         private void UpArrow_Click(object sender, EventArgs e)
@@ -669,7 +672,7 @@ namespace WinFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -805,26 +808,117 @@ namespace WinFormsApp5
 
         private async void Button_Click(object sender, EventArgs e)
         {
-            if (blocked1 == 0)
+            if (i_defeated_laser == 0)
             {
-                blocked1 = 1;
-                for (int i = 0; i < 6; i++)
-                    but[i].Visible = false;
-                for (int i = 1; i <= 22; i++)
+                if (blocked1 == 0)
                 {
-                    Robin2.Location = new Point(Robin2.Location.X + 5, Robin2.Location.Y);
-                    await Task.Delay(25);
+                    blocked1 = 1;
+                    for (int i = 0; i < 6; i++)
+                        but[i].Visible = false;
+                    for (int i = 1; i <= 22; i++)
+                    {
+                        Robin2.Location = new Point(Robin2.Location.X + 5, Robin2.Location.Y);
+                        await Task.Delay(25);
+                    }
+                    Image1.Visible = true;
+                    await Task.Delay(750);
+                    Image1.Visible = Robin2.Visible = false;
+                    await Task.Delay(750);
+                    Lose5.Visible = true;
+                    Lose5.BringToFront();
+                    Back.Visible = true;
+                    Back.BringToFront();
                 }
-                Image1.Visible = true;
-                await Task.Delay(750);
-                Image1.Visible = Robin2.Visible = false;
-                await Task.Delay(750);
-                Lose5.Visible = true;
-                Lose5.BringToFront();
-                Back.Visible = true;
-                Back.BringToFront();
             }
         }
-    }
 
+        private void Image1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void LaserBasement_Click(object sender, EventArgs e)
+        {
+            if(i_combined_staff_with_apple == 1 && but[1].Visible == true && i_defeated_laser == 0)
+            {
+                for (int i = 0; i < 6; i++)
+                    but[i].Visible = false;
+                blocked1 = 1;
+                Staff.Image = StaffAgain.Image;
+                Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
+                Basement4.Image = pictureBox5.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox6.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox7.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox8.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox9.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox10.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox11.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox12.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox13.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox14.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox15.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox16.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox17.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox18.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox19.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox20.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox21.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox22.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox23.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox24.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox25.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox26.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox27.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox28.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox29.Image;
+                await Task.Delay(20);
+                Basement4.Image = pictureBox30.Image;
+                await Task.Delay(20);
+                Basement4.Image = Basement4Again.Image;
+                Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = true;
+                LaserBasement.Image = BrokenLaser.Image;
+                blocked1 = 0;
+                i_defeated_laser = 1;
+            }           
+        }
+
+        private void Lose5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
