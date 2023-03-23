@@ -31,6 +31,7 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             Lose5.Visible = false;
             Image1.Visible = false;
             Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
@@ -607,19 +608,22 @@ namespace WinFormsApp5
 
         private void RightArrow2_Click(object sender, EventArgs e)
         {
-            Basement2.Visible = true;
-            //Basement2.BringToFront();
-            UpArrow.Visible = false;
-            Ladder.Visible = RightArrow2.Visible = false;
-            Basement2.Height = 450;
-            Basement2.Width = 783;
-            Basement2.Location = new Point(0, 0);
-            RightArrow.Visible = false;
-            LeftArrow2.Visible = true;
-            LeftArrow2.BringToFront();
-            Keypad.Visible = true;
-            if (door_unlocked == 1)
-                RightArrow3.Visible = true;
+            if(blocked1 != 1)
+            {
+                Basement2.Visible = true;
+                //Basement2.BringToFront();
+                UpArrow.Visible = false;
+                Ladder.Visible = RightArrow2.Visible = false;
+                Basement2.Height = 450;
+                Basement2.Width = 783;
+                Basement2.Location = new Point(0, 0);
+                RightArrow.Visible = false;
+                LeftArrow2.Visible = true;
+                LeftArrow2.BringToFront();
+                Keypad.Visible = true;
+                if (door_unlocked == 1)
+                    RightArrow3.Visible = true;
+            }       
         }
 
         private void LeftArrow2_Click(object sender, EventArgs e)
@@ -919,6 +923,32 @@ namespace WinFormsApp5
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void Ladder_Click_1(object sender, EventArgs e)
+        {
+            if (but[2].Visible == true)
+            {
+                but[2].Visible = false;
+                if(i_combined_staff_with_apple == 0)
+                {
+                    swap_buttons(but[2], but[3]);
+                    swap_pictures(Bucketofwater, Apple);
+                }
+                Bucketofwater.Visible = false;
+                UpArrow.Dispose();
+                blocked1 = 1;
+                Speak.Visible = true;
+                Speak.BringToFront();
+                Speak.Location = new Point(Speak.Location.X - 180, Speak.Location.Y - 50);
+                string sss = Speak.Text;
+                Speak.Text = "Now the ladder is slippery...";
+                await Task.Delay(2000);
+                Speak.Visible = false;
+                Speak.Text = sss;
+                Speak.Location = new Point(Speak.Location.X + 180, Speak.Location.Y + 50);
+                blocked1 = 0;
+            }
         }
     }
 }

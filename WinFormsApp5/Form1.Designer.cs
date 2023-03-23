@@ -478,6 +478,7 @@
             this.Ladder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Ladder.TabIndex = 27;
             this.Ladder.TabStop = false;
+            this.Ladder.Click += new System.EventHandler(this.Ladder_Click_1);
             // 
             // Basement2
             // 
