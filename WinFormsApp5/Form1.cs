@@ -31,7 +31,8 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Lose6.Visible = false;
+            Image3.Visible = Image4.Visible = Image5.Visible = Speak2.Visible = false;
             Lose5.Visible = false;
             Image1.Visible = false;
             Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
@@ -454,6 +455,15 @@ namespace WinFormsApp5
                 Robin2.Visible = true;
                 Lose5.Visible = Back.Visible = false;
             }
+            else if (Lose6.Visible == true)
+            {              
+                Image3.Visible = false;
+                Speak2.Visible = false;
+                Image5.Visible = false;
+                Image4.Visible = false;
+                Lose6.Visible = false;
+                Back.Visible = false;
+            }
         }
 
         private void swap_pictures(PictureBox p1, PictureBox p2)
@@ -834,6 +844,40 @@ namespace WinFormsApp5
                     Back.BringToFront();
                 }
             }
+            else
+            {
+                //361, 188
+                //469, 135
+                //284, 151
+                for (int i = 0; i < 6; i++)
+                    but[i].Visible = false;
+                blocked1 = 1;
+                Image3.Visible = true;
+                Image3.BringToFront();
+                Speak2.Visible = true;
+                Speak2.BringToFront();
+                Speak2.BackColor = Speak.BackColor;
+                Speak2.Location = new Point(361, 188);
+                Speak2.Text = "Why is the laser not working? I should go check it out";
+                await Task.Delay(2500);
+                Image5.Visible = true;
+                Image5.BringToFront();
+                Speak2.BringToFront();
+                Speak2.Location = new Point(469, 135);
+                Speak2.Text = "Robin thinks he's so smart he deactivates my laser, now he'll see...";
+                await Task.Delay(2500);
+                Image4.Visible = true;
+                Image4.BringToFront();
+                Speak2.Location = new Point(284, 151);
+                Speak2.Text = "You've got to be kidding me...";
+                Speak2.BringToFront();
+                await Task.Delay(2500);
+                Lose6.Visible = true;
+                Lose6.BringToFront();
+                Back.Visible = true;
+                Back.BringToFront();
+                blocked1 = 0;
+            }
         }
 
         private void Image1_Click(object sender, EventArgs e)
@@ -907,6 +951,7 @@ namespace WinFormsApp5
                 LaserBasement.Image = BrokenLaser.Image;
                 blocked1 = 0;
                 i_defeated_laser = 1;
+                RedLine2.Dispose();
             }           
         }
 
@@ -949,6 +994,11 @@ namespace WinFormsApp5
                 Speak.Location = new Point(Speak.Location.X + 180, Speak.Location.Y + 50);
                 blocked1 = 0;
             }
+        }       
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

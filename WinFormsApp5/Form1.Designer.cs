@@ -119,6 +119,11 @@
             this.StaffAgain = new System.Windows.Forms.PictureBox();
             this.BrokenLaser = new System.Windows.Forms.PictureBox();
             this.Basement4Again = new System.Windows.Forms.PictureBox();
+            this.Image3 = new System.Windows.Forms.PictureBox();
+            this.Image4 = new System.Windows.Forms.PictureBox();
+            this.Image5 = new System.Windows.Forms.PictureBox();
+            this.Speak2 = new System.Windows.Forms.Button();
+            this.Lose6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -190,6 +195,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.StaffAgain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrokenLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement4Again)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1093,11 +1102,67 @@
             this.Basement4Again.TabIndex = 90;
             this.Basement4Again.TabStop = false;
             // 
+            // Image3
+            // 
+            this.Image3.Image = ((System.Drawing.Image)(resources.GetObject("Image3.Image")));
+            this.Image3.Location = new System.Drawing.Point(0, 0);
+            this.Image3.Name = "Image3";
+            this.Image3.Size = new System.Drawing.Size(783, 456);
+            this.Image3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image3.TabIndex = 91;
+            this.Image3.TabStop = false;
+            // 
+            // Image4
+            // 
+            this.Image4.Image = ((System.Drawing.Image)(resources.GetObject("Image4.Image")));
+            this.Image4.Location = new System.Drawing.Point(0, 0);
+            this.Image4.Name = "Image4";
+            this.Image4.Size = new System.Drawing.Size(783, 456);
+            this.Image4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image4.TabIndex = 92;
+            this.Image4.TabStop = false;
+            // 
+            // Image5
+            // 
+            this.Image5.Image = ((System.Drawing.Image)(resources.GetObject("Image5.Image")));
+            this.Image5.Location = new System.Drawing.Point(0, 0);
+            this.Image5.Name = "Image5";
+            this.Image5.Size = new System.Drawing.Size(783, 456);
+            this.Image5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image5.TabIndex = 93;
+            this.Image5.TabStop = false;
+            // 
+            // Speak2
+            // 
+            this.Speak2.FlatAppearance.BorderSize = 0;
+            this.Speak2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Speak2.Location = new System.Drawing.Point(284, 151);
+            this.Speak2.Name = "Speak2";
+            this.Speak2.Size = new System.Drawing.Size(198, 69);
+            this.Speak2.TabIndex = 94;
+            this.Speak2.UseVisualStyleBackColor = true;
+            this.Speak2.Click += new System.EventHandler(this.button14_Click_1);
+            // 
+            // Lose6
+            // 
+            this.Lose6.Image = ((System.Drawing.Image)(resources.GetObject("Lose6.Image")));
+            this.Lose6.Location = new System.Drawing.Point(-43, -13);
+            this.Lose6.Name = "Lose6";
+            this.Lose6.Size = new System.Drawing.Size(889, 522);
+            this.Lose6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose6.TabIndex = 95;
+            this.Lose6.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose6);
+            this.Controls.Add(this.Speak2);
+            this.Controls.Add(this.Image5);
+            this.Controls.Add(this.Image4);
+            this.Controls.Add(this.Image3);
             this.Controls.Add(this.Basement4Again);
             this.Controls.Add(this.BrokenLaser);
             this.Controls.Add(this.StaffAgain);
@@ -1263,6 +1328,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.StaffAgain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrokenLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement4Again)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1359,5 +1428,10 @@
         private PictureBox StaffAgain;
         private PictureBox BrokenLaser;
         private PictureBox Basement4Again;
+        private PictureBox Image3;
+        private PictureBox Image4;
+        private PictureBox Image5;
+        private Button Speak2;
+        private PictureBox Lose6;
     }
 }
