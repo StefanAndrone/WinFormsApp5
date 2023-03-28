@@ -28,9 +28,11 @@ namespace WinFormsApp5
         int i_combined_staff_with_apple = 0;
         int door_unlocked = 0;
         int i_defeated_laser = 0;
+        int i_made_the_ladder_slippery = 0;
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Basement5.Visible = false;
             Lose6.Visible = false;
             Image3.Visible = Image4.Visible = Image5.Visible = Speak2.Visible = false;
             Lose5.Visible = false;
@@ -844,7 +846,7 @@ namespace WinFormsApp5
                     Back.BringToFront();
                 }
             }
-            else
+            else if(i_made_the_ladder_slippery == 0)
             {
                 //361, 188
                 //469, 135
@@ -877,6 +879,60 @@ namespace WinFormsApp5
                 Back.Visible = true;
                 Back.BringToFront();
                 blocked1 = 0;
+            }
+            else
+            {
+                if(blocked1 == 0)
+                {
+                    for (int i = 0; i < 6; i++)
+                        but[i].Visible = false;
+                    blocked1 = 1;
+                    Image3.Visible = true;
+                    Image3.BringToFront();
+                    Speak2.Visible = true;
+                    Speak2.BringToFront();
+                    Speak2.BackColor = Speak.BackColor;
+                    Speak2.Location = new Point(361, 188);
+                    Speak2.Text = "Why is the laser not working? I should go check it out";
+                    await Task.Delay(2500);
+                    Basement5.Visible = true;
+                    Basement5.BringToFront();
+                    Ladder.Visible = true;
+                    Ladder.BringToFront();
+                    int[] v = new int[7];
+                    v[0] = -93;
+                    v[1] = -60;
+                    v[2] = -27;
+                    v[3] = 6;
+                    v[4] = 39;
+                    v[5] = 72;
+                    v[6] = 103;
+                    MadMod2.BringToFront();
+                    MadMod2.Visible = true;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        await Task.Delay(25);
+                        MadMod2.Location = new Point(288, v[i]);
+                    }
+                    await Task.Delay(25);
+                    MadMod2.Visible = false;
+                    Basement5.Image = Basement6.Image;
+                    await Task.Delay(1000);
+                    Basement5.Visible = Ladder.Visible = false;
+                    Image3.Visible = false;
+                    Speak2.Location = new Point(284, 151);
+                    Speak2.Text = "Guess I finally got rid of Mad Mod, now let's keep moving...";
+                    await Task.Delay(2500);
+                    Basement4.Visible = Robin2.Visible = LaserBasement.Visible = RedLine2.Visible = LeftArrow3.Visible = Button.Visible = false;
+                    Speak2.Visible = false;
+                    RightArrow3.Visible = false;
+                    Basement1.Visible = Basement2.Visible = false;
+                    Hole.Visible = false;
+                    LeftArrow.Visible = false;
+                    RightArrow.Visible = true;
+                    var = 8;
+                    blocked1 = 0;
+                }           
             }
         }
 
@@ -993,6 +1049,7 @@ namespace WinFormsApp5
                 Speak.Text = sss;
                 Speak.Location = new Point(Speak.Location.X + 180, Speak.Location.Y + 50);
                 blocked1 = 0;
+                i_made_the_ladder_slippery = 1;
             }
         }       
 

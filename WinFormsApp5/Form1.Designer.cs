@@ -124,6 +124,9 @@
             this.Image5 = new System.Windows.Forms.PictureBox();
             this.Speak2 = new System.Windows.Forms.Button();
             this.Lose6 = new System.Windows.Forms.PictureBox();
+            this.MadMod2 = new System.Windows.Forms.PictureBox();
+            this.Basement5 = new System.Windows.Forms.PictureBox();
+            this.Basement6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -199,6 +202,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadMod2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1153,11 +1159,44 @@
             this.Lose6.TabIndex = 95;
             this.Lose6.TabStop = false;
             // 
+            // MadMod2
+            // 
+            this.MadMod2.Image = ((System.Drawing.Image)(resources.GetObject("MadMod2.Image")));
+            this.MadMod2.Location = new System.Drawing.Point(288, 10000);
+            this.MadMod2.Name = "MadMod2";
+            this.MadMod2.Size = new System.Drawing.Size(88, 214);
+            this.MadMod2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MadMod2.TabIndex = 96;
+            this.MadMod2.TabStop = false;
+            // 
+            // Basement5
+            // 
+            this.Basement5.Image = ((System.Drawing.Image)(resources.GetObject("Basement5.Image")));
+            this.Basement5.Location = new System.Drawing.Point(0, -4);
+            this.Basement5.Name = "Basement5";
+            this.Basement5.Size = new System.Drawing.Size(783, 456);
+            this.Basement5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Basement5.TabIndex = 97;
+            this.Basement5.TabStop = false;
+            // 
+            // Basement6
+            // 
+            this.Basement6.Image = ((System.Drawing.Image)(resources.GetObject("Basement6.Image")));
+            this.Basement6.Location = new System.Drawing.Point(10000, 10000);
+            this.Basement6.Name = "Basement6";
+            this.Basement6.Size = new System.Drawing.Size(298, 62);
+            this.Basement6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Basement6.TabIndex = 98;
+            this.Basement6.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Basement6);
+            this.Controls.Add(this.Basement5);
+            this.Controls.Add(this.MadMod2);
             this.Controls.Add(this.Lose6);
             this.Controls.Add(this.Speak2);
             this.Controls.Add(this.Image5);
@@ -1332,6 +1371,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MadMod2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basement6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1433,5 +1475,8 @@
         private PictureBox Image5;
         private Button Speak2;
         private PictureBox Lose6;
+        private PictureBox MadMod2;
+        private PictureBox Basement5;
+        private PictureBox Basement6;
     }
 }
