@@ -954,9 +954,14 @@ namespace WinFormsApp5
                     var = 8;
                     blocked1 = 0;
                     Box2.Visible = true;
+                    for (int i = 0; i < 6; i++)
+                        but[i].Dispose();
+                    StaffPB.Visible = true;
+                    StaffPB.BringToFront();
                 }           
             }
         }
+
 
         private void Image1_Click(object sender, EventArgs e)
         {
@@ -1082,7 +1087,7 @@ namespace WinFormsApp5
 
         private void Box2_Click(object sender, EventArgs e)
         {
-            SkatePB.Visible = PlankPB.Visible = StaffPB.Visible = ShovelPB.Visible = true;
+            SkatePB.Visible = PlankPB.Visible  = ShovelPB.Visible = true;
             SkatePB.BringToFront();
             ShovelPB.BringToFront();
             StaffPB.BringToFront();
