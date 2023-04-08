@@ -32,6 +32,9 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Black.Visible = false;
+            SkatePB.Visible = PlankPB.Visible = StaffPB.Visible = ShovelPB.Visible = false;
+            Box2.Visible = false;
             Basement5.Visible = false;
             Lose6.Visible = false;
             Image3.Visible = Image4.Visible = Image5.Visible = Speak2.Visible = false;
@@ -197,10 +200,28 @@ namespace WinFormsApp5
                 Back.Visible = true;
                 Back.BringToFront();
             }
+            else if(var == 8)
+            {
+                LeftArrow.Visible = true;
+                RightArrow.Visible = false;
+                var = 9;
+                Box2.Visible = false;
+                Black.Visible = true;
+                return;
+            }
         }
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
+            if(var == 9)
+            {
+                LeftArrow.Visible = false;
+                RightArrow.Visible = true;
+                var = 8;
+                Box2.Visible = true;
+                Black.Visible = false;
+                return;
+            }
             if (blocked1 == 1 || blocked2 == 1)
                 return;
             if (var == 5)
@@ -932,6 +953,7 @@ namespace WinFormsApp5
                     RightArrow.Visible = true;
                     var = 8;
                     blocked1 = 0;
+                    Box2.Visible = true;
                 }           
             }
         }
@@ -1056,6 +1078,16 @@ namespace WinFormsApp5
         private void button14_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void Box2_Click(object sender, EventArgs e)
+        {
+            SkatePB.Visible = PlankPB.Visible = StaffPB.Visible = ShovelPB.Visible = true;
+            SkatePB.BringToFront();
+            ShovelPB.BringToFront();
+            StaffPB.BringToFront();
+            PlankPB.BringToFront();
+            Box2.Dispose();
         }
     }
 }

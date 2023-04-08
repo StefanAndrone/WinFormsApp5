@@ -127,6 +127,12 @@
             this.MadMod2 = new System.Windows.Forms.PictureBox();
             this.Basement5 = new System.Windows.Forms.PictureBox();
             this.Basement6 = new System.Windows.Forms.PictureBox();
+            this.StaffPB = new System.Windows.Forms.PictureBox();
+            this.ShovelPB = new System.Windows.Forms.PictureBox();
+            this.SkatePB = new System.Windows.Forms.PictureBox();
+            this.PlankPB = new System.Windows.Forms.PictureBox();
+            this.Box2 = new System.Windows.Forms.PictureBox();
+            this.Black = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -205,6 +211,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.MadMod2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShovelPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkatePB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlankPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Black)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1189,11 +1201,78 @@
             this.Basement6.TabIndex = 98;
             this.Basement6.TabStop = false;
             // 
+            // StaffPB
+            // 
+            this.StaffPB.Image = ((System.Drawing.Image)(resources.GetObject("StaffPB.Image")));
+            this.StaffPB.Location = new System.Drawing.Point(10, 10);
+            this.StaffPB.Name = "StaffPB";
+            this.StaffPB.Size = new System.Drawing.Size(50, 50);
+            this.StaffPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StaffPB.TabIndex = 99;
+            this.StaffPB.TabStop = false;
+            // 
+            // ShovelPB
+            // 
+            this.ShovelPB.Image = ((System.Drawing.Image)(resources.GetObject("ShovelPB.Image")));
+            this.ShovelPB.Location = new System.Drawing.Point(10, 70);
+            this.ShovelPB.Name = "ShovelPB";
+            this.ShovelPB.Size = new System.Drawing.Size(50, 50);
+            this.ShovelPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShovelPB.TabIndex = 100;
+            this.ShovelPB.TabStop = false;
+            // 
+            // SkatePB
+            // 
+            this.SkatePB.Image = ((System.Drawing.Image)(resources.GetObject("SkatePB.Image")));
+            this.SkatePB.Location = new System.Drawing.Point(70, 70);
+            this.SkatePB.Name = "SkatePB";
+            this.SkatePB.Size = new System.Drawing.Size(50, 50);
+            this.SkatePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SkatePB.TabIndex = 101;
+            this.SkatePB.TabStop = false;
+            // 
+            // PlankPB
+            // 
+            this.PlankPB.Image = ((System.Drawing.Image)(resources.GetObject("PlankPB.Image")));
+            this.PlankPB.Location = new System.Drawing.Point(70, 10);
+            this.PlankPB.Name = "PlankPB";
+            this.PlankPB.Size = new System.Drawing.Size(50, 50);
+            this.PlankPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PlankPB.TabIndex = 102;
+            this.PlankPB.TabStop = false;
+            // 
+            // Box2
+            // 
+            this.Box2.Image = ((System.Drawing.Image)(resources.GetObject("Box2.Image")));
+            this.Box2.Location = new System.Drawing.Point(546, 311);
+            this.Box2.Name = "Box2";
+            this.Box2.Size = new System.Drawing.Size(101, 93);
+            this.Box2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Box2.TabIndex = 103;
+            this.Box2.TabStop = false;
+            this.Box2.Click += new System.EventHandler(this.Box2_Click);
+            // 
+            // Black
+            // 
+            this.Black.Image = ((System.Drawing.Image)(resources.GetObject("Black.Image")));
+            this.Black.Location = new System.Drawing.Point(273, 253);
+            this.Black.Name = "Black";
+            this.Black.Size = new System.Drawing.Size(295, 220);
+            this.Black.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Black.TabIndex = 104;
+            this.Black.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Black);
+            this.Controls.Add(this.Box2);
+            this.Controls.Add(this.PlankPB);
+            this.Controls.Add(this.SkatePB);
+            this.Controls.Add(this.ShovelPB);
+            this.Controls.Add(this.StaffPB);
             this.Controls.Add(this.Basement6);
             this.Controls.Add(this.Basement5);
             this.Controls.Add(this.MadMod2);
@@ -1374,6 +1453,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.MadMod2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basement6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShovelPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkatePB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlankPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Box2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Black)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1478,5 +1563,11 @@
         private PictureBox MadMod2;
         private PictureBox Basement5;
         private PictureBox Basement6;
+        private PictureBox StaffPB;
+        private PictureBox ShovelPB;
+        private PictureBox SkatePB;
+        private PictureBox PlankPB;
+        private PictureBox Box2;
+        private PictureBox Black;
     }
 }
