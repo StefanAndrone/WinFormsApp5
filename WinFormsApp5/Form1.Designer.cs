@@ -133,6 +133,7 @@
             this.PlankPB = new System.Windows.Forms.PictureBox();
             this.Box2 = new System.Windows.Forms.PictureBox();
             this.Black = new System.Windows.Forms.PictureBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -217,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PlankPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1210,6 +1212,7 @@
             this.StaffPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StaffPB.TabIndex = 99;
             this.StaffPB.TabStop = false;
+            this.StaffPB.Click += new System.EventHandler(this.StaffPB_Click);
             // 
             // ShovelPB
             // 
@@ -1220,6 +1223,7 @@
             this.ShovelPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShovelPB.TabIndex = 100;
             this.ShovelPB.TabStop = false;
+            this.ShovelPB.Click += new System.EventHandler(this.ShovelPB_Click);
             // 
             // SkatePB
             // 
@@ -1230,6 +1234,7 @@
             this.SkatePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SkatePB.TabIndex = 101;
             this.SkatePB.TabStop = false;
+            this.SkatePB.Click += new System.EventHandler(this.SkatePB_Click);
             // 
             // PlankPB
             // 
@@ -1240,6 +1245,7 @@
             this.PlankPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlankPB.TabIndex = 102;
             this.PlankPB.TabStop = false;
+            this.PlankPB.Click += new System.EventHandler(this.PlankPB_Click);
             // 
             // Box2
             // 
@@ -1262,11 +1268,21 @@
             this.Black.TabIndex = 104;
             this.Black.TabStop = false;
             // 
+            // pictureBox31
+            // 
+            this.pictureBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pictureBox31.Location = new System.Drawing.Point(7, 7);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox31.TabIndex = 105;
+            this.pictureBox31.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.Black);
             this.Controls.Add(this.Box2);
             this.Controls.Add(this.PlankPB);
@@ -1459,6 +1475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PlankPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1569,5 +1586,6 @@
         private PictureBox PlankPB;
         private PictureBox Box2;
         private PictureBox Black;
+        private PictureBox pictureBox31;
     }
 }

@@ -32,6 +32,7 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox31.Visible = false;
             Black.Visible = false;
             SkatePB.Visible = PlankPB.Visible = StaffPB.Visible = ShovelPB.Visible = false;
             Box2.Visible = false;
@@ -1093,6 +1094,42 @@ namespace WinFormsApp5
             StaffPB.BringToFront();
             PlankPB.BringToFront();
             Box2.Dispose();
+        }
+
+        private void StaffPB_Click(object sender, EventArgs e)
+        {
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            StaffPB.BringToFront();
+            pictureBox31.Location = new Point(5, 5);
+            pictureBox31.BackColor = Color.Green;
+        }
+
+        private void PlankPB_Click(object sender, EventArgs e)
+        {
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            PlankPB.BringToFront();
+            pictureBox31.Location = new Point(65, 5);
+            pictureBox31.BackColor = Color.Green;
+        }
+
+        private void ShovelPB_Click(object sender, EventArgs e)
+        {
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            ShovelPB.BringToFront();
+            pictureBox31.Location = new Point(5, 65);
+            pictureBox31.BackColor = Color.Green;
+        }
+
+        private void SkatePB_Click(object sender, EventArgs e)
+        {
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            SkatePB.BringToFront();
+            pictureBox31.Location = new Point(65, 65);
+            pictureBox31.BackColor = Color.Green;
         }
     }
 }
