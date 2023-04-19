@@ -134,6 +134,8 @@
             this.Box2 = new System.Windows.Forms.PictureBox();
             this.Black = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.Plank2 = new System.Windows.Forms.PictureBox();
+            this.RightArrow4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -219,6 +221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plank2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1267,6 +1271,7 @@
             this.Black.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Black.TabIndex = 104;
             this.Black.TabStop = false;
+            this.Black.Click += new System.EventHandler(this.Black_Click);
             // 
             // pictureBox31
             // 
@@ -1277,11 +1282,34 @@
             this.pictureBox31.TabIndex = 105;
             this.pictureBox31.TabStop = false;
             // 
+            // Plank2
+            // 
+            this.Plank2.Image = ((System.Drawing.Image)(resources.GetObject("Plank2.Image")));
+            this.Plank2.Location = new System.Drawing.Point(234, 313);
+            this.Plank2.Name = "Plank2";
+            this.Plank2.Size = new System.Drawing.Size(388, 23);
+            this.Plank2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Plank2.TabIndex = 106;
+            this.Plank2.TabStop = false;
+            // 
+            // RightArrow4
+            // 
+            this.RightArrow4.Image = ((System.Drawing.Image)(resources.GetObject("RightArrow4.Image")));
+            this.RightArrow4.Location = new System.Drawing.Point(251, 197);
+            this.RightArrow4.Name = "RightArrow4";
+            this.RightArrow4.Size = new System.Drawing.Size(39, 32);
+            this.RightArrow4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightArrow4.TabIndex = 107;
+            this.RightArrow4.TabStop = false;
+            this.RightArrow4.Click += new System.EventHandler(this.RightArrow4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.RightArrow4);
+            this.Controls.Add(this.Plank2);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.Black);
             this.Controls.Add(this.Box2);
@@ -1476,6 +1504,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plank2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1587,5 +1617,7 @@
         private PictureBox Box2;
         private PictureBox Black;
         private PictureBox pictureBox31;
+        private PictureBox Plank2;
+        private PictureBox RightArrow4;
     }
 }

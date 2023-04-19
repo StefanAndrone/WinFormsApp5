@@ -29,9 +29,12 @@ namespace WinFormsApp5
         int door_unlocked = 0;
         int i_defeated_laser = 0;
         int i_made_the_ladder_slippery = 0;
+        int covered = 0;
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            RightArrow4.Visible = false;
+            Plank2.Visible = false;
             pictureBox31.Visible = false;
             Black.Visible = false;
             SkatePB.Visible = PlankPB.Visible = StaffPB.Visible = ShovelPB.Visible = false;
@@ -207,24 +210,31 @@ namespace WinFormsApp5
                 RightArrow.Visible = false;
                 var = 9;
                 Box2.Visible = false;
-                Black.Visible = true;
+                Black.Visible = true;         
+                if (covered == 1)
+                {
+                    Plank2.Visible = true;
+                    RightArrow4.Visible = true;
+                }
                 return;
             }
         }
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
-            if(var == 9)
+            if (blocked1 == 1 || blocked2 == 1)
+                return;
+            if (var == 9)
             {
                 LeftArrow.Visible = false;
                 RightArrow.Visible = true;
                 var = 8;
                 Box2.Visible = true;
                 Black.Visible = false;
+                Plank2.Visible = false;
+                RightArrow4.Visible = false;
                 return;
-            }
-            if (blocked1 == 1 || blocked2 == 1)
-                return;
+            }         
             if (var == 5)
             {
                 var = 4;
@@ -1098,38 +1108,71 @@ namespace WinFormsApp5
 
         private void StaffPB_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             pictureBox31.Visible = true;
             pictureBox31.BringToFront();
             StaffPB.BringToFront();
-            pictureBox31.Location = new Point(5, 5);
+            pictureBox31.Location = new Point(StaffPB.Location.X - 5, StaffPB.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
         }
 
         private void PlankPB_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             pictureBox31.Visible = true;
             pictureBox31.BringToFront();
             PlankPB.BringToFront();
-            pictureBox31.Location = new Point(65, 5);
+            pictureBox31.Location = new Point(PlankPB.Location.X - 5, PlankPB.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
         }
 
         private void ShovelPB_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             pictureBox31.Visible = true;
             pictureBox31.BringToFront();
             ShovelPB.BringToFront();
-            pictureBox31.Location = new Point(5, 65);
+            pictureBox31.Location = new Point(ShovelPB.Location.X - 5, ShovelPB.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
         }
 
         private void SkatePB_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             pictureBox31.Visible = true;
             pictureBox31.BringToFront();
             SkatePB.BringToFront();
-            pictureBox31.Location = new Point(65, 65);
+            pictureBox31.Location = new Point(SkatePB.Location.X - 5, SkatePB.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
+        }
+
+        private void Black_Click(object sender, EventArgs e)
+        {
+            if(pictureBox31.Location.X == PlankPB.Location.X - 5 && pictureBox31.Location.Y == PlankPB.Location.Y - 5)
+            {
+                swap_pictures(PlankPB, SkatePB);
+                PlankPB.Visible = false;
+                Plank2.Visible = true;
+                pictureBox31.Visible = false;
+                covered = 1;
+                RightArrow4.Visible = true;
+            }
+        }
+
+        private async void RightArrow4_Click(object sender, EventArgs e)
+        {
+            pictureBox31.Visible = false;
+            Speak.Visible = true;
+            Speak.Text = "I do not have enough confidence to walk on that thin plank...";
+            Speak.Location = new Point(RightArrow4.Location.X - 10, RightArrow4.Location.Y - 10);
+            blocked1 = 1;
+            await Task.Delay(2000);
+            Speak.Visible = false;
+            blocked1 = 0;
         }
     }
 }
