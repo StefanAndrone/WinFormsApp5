@@ -136,6 +136,8 @@
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.Plank2 = new System.Windows.Forms.PictureBox();
             this.RightArrow4 = new System.Windows.Forms.PictureBox();
+            this.RobinBalance = new System.Windows.Forms.PictureBox();
+            this.RedLine3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -223,6 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Plank2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinBalance)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1285,17 +1288,18 @@
             // Plank2
             // 
             this.Plank2.Image = ((System.Drawing.Image)(resources.GetObject("Plank2.Image")));
-            this.Plank2.Location = new System.Drawing.Point(234, 313);
+            this.Plank2.Location = new System.Drawing.Point(263, 362);
             this.Plank2.Name = "Plank2";
-            this.Plank2.Size = new System.Drawing.Size(388, 23);
+            this.Plank2.Size = new System.Drawing.Size(318, 23);
             this.Plank2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Plank2.TabIndex = 106;
             this.Plank2.TabStop = false;
+            this.Plank2.Click += new System.EventHandler(this.Plank2_Click);
             // 
             // RightArrow4
             // 
             this.RightArrow4.Image = ((System.Drawing.Image)(resources.GetObject("RightArrow4.Image")));
-            this.RightArrow4.Location = new System.Drawing.Point(251, 197);
+            this.RightArrow4.Location = new System.Drawing.Point(305, 286);
             this.RightArrow4.Name = "RightArrow4";
             this.RightArrow4.Size = new System.Drawing.Size(39, 32);
             this.RightArrow4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1303,11 +1307,32 @@
             this.RightArrow4.TabStop = false;
             this.RightArrow4.Click += new System.EventHandler(this.RightArrow4_Click);
             // 
+            // RobinBalance
+            // 
+            this.RobinBalance.Image = ((System.Drawing.Image)(resources.GetObject("RobinBalance.Image")));
+            this.RobinBalance.Location = new System.Drawing.Point(273, 186);
+            this.RobinBalance.Name = "RobinBalance";
+            this.RobinBalance.Size = new System.Drawing.Size(117, 175);
+            this.RobinBalance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RobinBalance.TabIndex = 108;
+            this.RobinBalance.TabStop = false;
+            // 
+            // RedLine3
+            // 
+            this.RedLine3.BackColor = System.Drawing.Color.Red;
+            this.RedLine3.Location = new System.Drawing.Point(375, 288);
+            this.RedLine3.Name = "RedLine3";
+            this.RedLine3.Size = new System.Drawing.Size(3, 235);
+            this.RedLine3.TabIndex = 109;
+            this.RedLine3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.RedLine3);
+            this.Controls.Add(this.RobinBalance);
             this.Controls.Add(this.RightArrow4);
             this.Controls.Add(this.Plank2);
             this.Controls.Add(this.pictureBox31);
@@ -1506,6 +1531,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Plank2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinBalance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1619,5 +1645,7 @@
         private PictureBox pictureBox31;
         private PictureBox Plank2;
         private PictureBox RightArrow4;
+        private PictureBox RobinBalance;
+        private Button RedLine3;
     }
 }

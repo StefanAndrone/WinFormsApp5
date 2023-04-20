@@ -33,6 +33,8 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            RedLine3.Visible = false;
+            RobinBalance.Visible = false;
             RightArrow4.Visible = false;
             Plank2.Visible = false;
             pictureBox31.Visible = false;
@@ -1165,14 +1167,49 @@ namespace WinFormsApp5
 
         private async void RightArrow4_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             pictureBox31.Visible = false;
             Speak.Visible = true;
             Speak.Text = "I do not have enough confidence to walk on that thin plank...";
-            Speak.Location = new Point(RightArrow4.Location.X - 10, RightArrow4.Location.Y - 10);
+            Speak.Location = new Point(261, 188);
             blocked1 = 1;
             await Task.Delay(2000);
             Speak.Visible = false;
             blocked1 = 0;
+        }
+
+        private async void Plank2_Click(object sender, EventArgs e)
+        {
+            if(pictureBox31.Location.X == StaffPB.Location.X - 5 && pictureBox31.Location.Y == StaffPB.Location.Y - 5)
+            {
+                pictureBox31.Visible = false;
+                blocked1 = 1;
+                RobinBalance.Visible = true;
+                Robin2.Visible = Robin.Visible = false;
+                RightArrow4.Visible = false;
+                for (int i = 1; i <= 32; i++)
+                {
+                    RobinBalance.Location = new Point(RobinBalance.Location.X + 5, RobinBalance.Location.Y);
+                    await Task.Delay(40);
+                }
+                Robin.Visible = true;
+                Robin.Location = new Point(Robin.Location.X + 425, Robin.Location.Y);
+                RobinBalance.Visible = false;
+                for (int i = 1; i <= 60; i++)
+                {
+                    Robin.Location = new Point(Robin.Location.X + 5, Robin.Location.Y);
+                    await Task.Delay(40);
+                }
+                Robin.Visible = true;
+                Robin.Location = new Point(Robin.Location.X - 425 - 300, Robin.Location.Y);
+                Black.Visible = false;
+                Plank2.Visible = false;
+                LeftArrow.Visible = false;
+                var = 10;
+                blocked1 = 0;
+                RedLine3.Visible = true;
+            }        
         }
     }
 }
