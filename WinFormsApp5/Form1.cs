@@ -1208,7 +1208,8 @@ namespace WinFormsApp5
                 LeftArrow.Visible = false;
                 var = 10;
                 blocked1 = 0;
-                RedLine3.Visible = true;
+                PlankPB.Visible = true;
+                //RedLine3.Visible = true;
             }        
         }
     }
