@@ -33,6 +33,10 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lose7.Visible = false;
+            SeemoreLaser.Visible = false;
+            SeemoreLeft.Visible = false;
+            SeemoreRight.Visible = false;
             RedLine3.Visible = false;
             RobinBalance.Visible = false;
             RightArrow4.Visible = false;
@@ -219,6 +223,31 @@ namespace WinFormsApp5
                     RightArrow4.Visible = true;
                 }
                 return;
+            }
+            else if(var == 10)
+            {
+                RightArrow.Visible = false;
+                SeemoreRight.Visible = true;
+                timebut.Visible = true;
+                timebut.Text = "00:03";
+                await Task.Delay(1000);
+                timebut.Text = "00:02";
+                await Task.Delay(1000);
+                timebut.Text = "00:01";
+                await Task.Delay(1000);
+                timebut.Visible = false;
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                SeemoreLeft.Visible = true;
+                await Task.Delay(500);
+                SeemoreLaser.Visible = true;
+                await Task.Delay(1000);
+                SeemoreLaser.Visible = Robin.Visible = false;
+                await Task.Delay(1000);
+                Lose7.Visible = true;
+                Lose7.BringToFront();
+                Back.Visible = true;
+                Back.BringToFront();
             }
         }
 
@@ -423,7 +452,7 @@ namespace WinFormsApp5
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -499,6 +528,15 @@ namespace WinFormsApp5
                 Image4.Visible = false;
                 Lose6.Visible = false;
                 Back.Visible = false;
+            }
+            else if(Lose7.Visible == true)
+            {           
+                RightArrow.Visible = true;
+                var = 10;
+                SeemoreRight.Visible = SeemoreLeft.Visible = false;
+                blocked1 = 0;
+                Robin.Visible = true;
+                Lose7.Visible = Back.Visible = false;
             }
         }
 
@@ -1209,8 +1247,19 @@ namespace WinFormsApp5
                 var = 10;
                 blocked1 = 0;
                 PlankPB.Visible = true;
+                RightArrow.Visible = true;
                 //RedLine3.Visible = true;
             }        
+        }
+
+        private void pictureBox32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeemoreLaser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

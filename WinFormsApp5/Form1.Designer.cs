@@ -138,6 +138,10 @@
             this.RightArrow4 = new System.Windows.Forms.PictureBox();
             this.RobinBalance = new System.Windows.Forms.PictureBox();
             this.RedLine3 = new System.Windows.Forms.Button();
+            this.SeemoreRight = new System.Windows.Forms.PictureBox();
+            this.SeemoreLeft = new System.Windows.Forms.PictureBox();
+            this.SeemoreLaser = new System.Windows.Forms.PictureBox();
+            this.Lose7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -226,6 +230,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Plank2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1326,11 +1334,56 @@
             this.RedLine3.TabIndex = 109;
             this.RedLine3.UseVisualStyleBackColor = false;
             // 
+            // SeemoreRight
+            // 
+            this.SeemoreRight.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreRight.Image")));
+            this.SeemoreRight.Location = new System.Drawing.Point(550, 151);
+            this.SeemoreRight.Name = "SeemoreRight";
+            this.SeemoreRight.Size = new System.Drawing.Size(120, 268);
+            this.SeemoreRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreRight.TabIndex = 110;
+            this.SeemoreRight.TabStop = false;
+            this.SeemoreRight.Click += new System.EventHandler(this.pictureBox32_Click);
+            // 
+            // SeemoreLeft
+            // 
+            this.SeemoreLeft.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreLeft.Image")));
+            this.SeemoreLeft.Location = new System.Drawing.Point(550, 152);
+            this.SeemoreLeft.Name = "SeemoreLeft";
+            this.SeemoreLeft.Size = new System.Drawing.Size(125, 267);
+            this.SeemoreLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreLeft.TabIndex = 111;
+            this.SeemoreLeft.TabStop = false;
+            // 
+            // SeemoreLaser
+            // 
+            this.SeemoreLaser.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreLaser.Image")));
+            this.SeemoreLaser.Location = new System.Drawing.Point(212, 190);
+            this.SeemoreLaser.Name = "SeemoreLaser";
+            this.SeemoreLaser.Size = new System.Drawing.Size(387, 30);
+            this.SeemoreLaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreLaser.TabIndex = 112;
+            this.SeemoreLaser.TabStop = false;
+            // 
+            // Lose7
+            // 
+            this.Lose7.Image = ((System.Drawing.Image)(resources.GetObject("Lose7.Image")));
+            this.Lose7.Location = new System.Drawing.Point(-9, -8);
+            this.Lose7.Name = "Lose7";
+            this.Lose7.Size = new System.Drawing.Size(825, 543);
+            this.Lose7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose7.TabIndex = 113;
+            this.Lose7.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose7);
+            this.Controls.Add(this.SeemoreLaser);
+            this.Controls.Add(this.SeemoreLeft);
+            this.Controls.Add(this.SeemoreRight);
             this.Controls.Add(this.RedLine3);
             this.Controls.Add(this.RobinBalance);
             this.Controls.Add(this.RightArrow4);
@@ -1532,6 +1585,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Plank2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1647,5 +1704,9 @@
         private PictureBox RightArrow4;
         private PictureBox RobinBalance;
         private Button RedLine3;
+        private PictureBox SeemoreRight;
+        private PictureBox SeemoreLeft;
+        private PictureBox SeemoreLaser;
+        private PictureBox Lose7;
     }
 }
