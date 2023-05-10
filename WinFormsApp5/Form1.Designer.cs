@@ -142,6 +142,7 @@
             this.SeemoreLeft = new System.Windows.Forms.PictureBox();
             this.SeemoreLaser = new System.Windows.Forms.PictureBox();
             this.Lose7 = new System.Windows.Forms.PictureBox();
+            this.DownArrow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -234,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownArrow)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1375,11 +1377,23 @@
             this.Lose7.TabIndex = 113;
             this.Lose7.TabStop = false;
             // 
+            // DownArrow
+            // 
+            this.DownArrow.Image = ((System.Drawing.Image)(resources.GetObject("DownArrow.Image")));
+            this.DownArrow.Location = new System.Drawing.Point(366, 373);
+            this.DownArrow.Name = "DownArrow";
+            this.DownArrow.Size = new System.Drawing.Size(60, 62);
+            this.DownArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DownArrow.TabIndex = 114;
+            this.DownArrow.TabStop = false;
+            this.DownArrow.Click += new System.EventHandler(this.pictureBox32_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.DownArrow);
             this.Controls.Add(this.Lose7);
             this.Controls.Add(this.SeemoreLaser);
             this.Controls.Add(this.SeemoreLeft);
@@ -1589,6 +1603,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownArrow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1708,5 +1723,6 @@
         private PictureBox SeemoreLeft;
         private PictureBox SeemoreLaser;
         private PictureBox Lose7;
+        private PictureBox DownArrow;
     }
 }
