@@ -143,6 +143,10 @@
             this.SeemoreLaser = new System.Windows.Forms.PictureBox();
             this.Lose7 = new System.Windows.Forms.PictureBox();
             this.DownArrow = new System.Windows.Forms.PictureBox();
+            this.Safe = new System.Windows.Forms.PictureBox();
+            this.SafeBack = new System.Windows.Forms.PictureBox();
+            this.MathProblem = new System.Windows.Forms.PictureBox();
+            this.Back3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -236,6 +240,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DownArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Safe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SafeBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MathProblem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1388,11 +1396,57 @@
             this.DownArrow.TabStop = false;
             this.DownArrow.Click += new System.EventHandler(this.pictureBox32_Click_1);
             // 
+            // Safe
+            // 
+            this.Safe.Image = ((System.Drawing.Image)(resources.GetObject("Safe.Image")));
+            this.Safe.Location = new System.Drawing.Point(231, 243);
+            this.Safe.Name = "Safe";
+            this.Safe.Size = new System.Drawing.Size(103, 93);
+            this.Safe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Safe.TabIndex = 115;
+            this.Safe.TabStop = false;
+            // 
+            // SafeBack
+            // 
+            this.SafeBack.Image = ((System.Drawing.Image)(resources.GetObject("SafeBack.Image")));
+            this.SafeBack.Location = new System.Drawing.Point(319, 243);
+            this.SafeBack.Name = "SafeBack";
+            this.SafeBack.Size = new System.Drawing.Size(15, 93);
+            this.SafeBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SafeBack.TabIndex = 116;
+            this.SafeBack.TabStop = false;
+            this.SafeBack.Click += new System.EventHandler(this.SafeBack_Click);
+            // 
+            // MathProblem
+            // 
+            this.MathProblem.Image = ((System.Drawing.Image)(resources.GetObject("MathProblem.Image")));
+            this.MathProblem.Location = new System.Drawing.Point(0, 0);
+            this.MathProblem.Name = "MathProblem";
+            this.MathProblem.Size = new System.Drawing.Size(783, 456);
+            this.MathProblem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MathProblem.TabIndex = 117;
+            this.MathProblem.TabStop = false;
+            // 
+            // Back3
+            // 
+            this.Back3.Image = ((System.Drawing.Image)(resources.GetObject("Back3.Image")));
+            this.Back3.Location = new System.Drawing.Point(645, 14);
+            this.Back3.Name = "Back3";
+            this.Back3.Size = new System.Drawing.Size(125, 62);
+            this.Back3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Back3.TabIndex = 118;
+            this.Back3.TabStop = false;
+            this.Back3.Click += new System.EventHandler(this.Back3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Back3);
+            this.Controls.Add(this.MathProblem);
+            this.Controls.Add(this.SafeBack);
+            this.Controls.Add(this.Safe);
             this.Controls.Add(this.DownArrow);
             this.Controls.Add(this.Lose7);
             this.Controls.Add(this.SeemoreLaser);
@@ -1604,6 +1658,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DownArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Safe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SafeBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MathProblem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1724,5 +1782,9 @@
         private PictureBox SeemoreLaser;
         private PictureBox Lose7;
         private PictureBox DownArrow;
+        private PictureBox Safe;
+        private PictureBox SafeBack;
+        private PictureBox MathProblem;
+        private PictureBox Back3;
     }
 }

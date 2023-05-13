@@ -33,6 +33,10 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Back3.Visible = false;
+            MathProblem.Visible = false;
+            Safe.Visible = false;
+            SafeBack.Visible = false;
             DownArrow.Visible = false;
             Lose7.Visible = false;
             SeemoreLaser.Visible = false;
@@ -286,6 +290,8 @@ namespace WinFormsApp5
             }
             if(var == 11)
             {
+                Safe.Visible = false;
+                SafeBack.Visible = false;
                 RedLine3.Visible = false;
                 var = 10;
                 RightArrow.Visible = true;
@@ -1277,11 +1283,27 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click_1(object sender, EventArgs e)
         {
+            Safe.Visible = true;
+            SafeBack.Visible = true;
             RedLine3.Visible = true;
             DownArrow.Visible = false;
             RightArrow.Visible = false;
             LeftArrow.Visible = true;
             var = 11;
+        }
+
+        private void SafeBack_Click(object sender, EventArgs e)
+        {
+            MathProblem.Visible = true;
+            MathProblem.BringToFront();
+            Back3.Visible = true;
+            Back3.BringToFront();
+        }
+
+        private void Back3_Click(object sender, EventArgs e)
+        {
+            Back3.Visible = false;
+            MathProblem.Visible = false;
         }
     }
 }
