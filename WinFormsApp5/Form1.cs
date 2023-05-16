@@ -33,6 +33,8 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Remote.Visible = false;
+            LaserSafe.Visible = false;
             Back3.Visible = false;
             MathProblem.Visible = false;
             Safe.Visible = false;
@@ -290,7 +292,9 @@ namespace WinFormsApp5
             }
             if(var == 11)
             {
+                Remote.Visible = false;
                 Safe.Visible = false;
+                LaserSafe.Visible = false;
                 SafeBack.Visible = false;
                 RedLine3.Visible = false;
                 var = 10;
@@ -1283,6 +1287,8 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click_1(object sender, EventArgs e)
         {
+            Remote.Visible = true;
+            LaserSafe.Visible = true;
             Safe.Visible = true;
             SafeBack.Visible = true;
             RedLine3.Visible = true;

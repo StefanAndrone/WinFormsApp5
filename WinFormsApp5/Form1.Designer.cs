@@ -147,6 +147,8 @@
             this.SafeBack = new System.Windows.Forms.PictureBox();
             this.MathProblem = new System.Windows.Forms.PictureBox();
             this.Back3 = new System.Windows.Forms.PictureBox();
+            this.LaserSafe = new System.Windows.Forms.PictureBox();
+            this.Remote = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -244,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SafeBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MathProblem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaserSafe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Remote)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1438,11 +1442,33 @@
             this.Back3.TabStop = false;
             this.Back3.Click += new System.EventHandler(this.Back3_Click);
             // 
+            // LaserSafe
+            // 
+            this.LaserSafe.Image = ((System.Drawing.Image)(resources.GetObject("LaserSafe.Image")));
+            this.LaserSafe.Location = new System.Drawing.Point(660, 0);
+            this.LaserSafe.Name = "LaserSafe";
+            this.LaserSafe.Size = new System.Drawing.Size(91, 473);
+            this.LaserSafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LaserSafe.TabIndex = 119;
+            this.LaserSafe.TabStop = false;
+            // 
+            // Remote
+            // 
+            this.Remote.Image = ((System.Drawing.Image)(resources.GetObject("Remote.Image")));
+            this.Remote.Location = new System.Drawing.Point(530, 338);
+            this.Remote.Name = "Remote";
+            this.Remote.Size = new System.Drawing.Size(87, 57);
+            this.Remote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Remote.TabIndex = 120;
+            this.Remote.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Remote);
+            this.Controls.Add(this.LaserSafe);
             this.Controls.Add(this.Back3);
             this.Controls.Add(this.MathProblem);
             this.Controls.Add(this.SafeBack);
@@ -1662,6 +1688,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SafeBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MathProblem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaserSafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Remote)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1786,5 +1814,7 @@
         private PictureBox SafeBack;
         private PictureBox MathProblem;
         private PictureBox Back3;
+        private PictureBox LaserSafe;
+        private PictureBox Remote;
     }
 }
