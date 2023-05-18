@@ -301,6 +301,9 @@ namespace WinFormsApp5
                 RightArrow.Visible = true;
                 DownArrow.Visible = true;
                 LeftArrow.Visible = false;
+                Robin.Location = new Point(Robin.Location.X - 100, Robin.Location.Y);
+                Safe.Location = new Point(Safe.Location.X + 100, Safe.Location.Y);
+                SafeBack.Location = new Point(SafeBack.Location.X + 100, SafeBack.Location.Y);
                 return;
             }
             Lose1.Visible = false;
@@ -1287,6 +1290,9 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click_1(object sender, EventArgs e)
         {
+            Robin.Location = new Point(Robin.Location.X + 100, Robin.Location.Y);
+            Safe.Location = new Point(Safe.Location.X - 100, Safe.Location.Y);
+            SafeBack.Location = new Point(SafeBack.Location.X - 100, SafeBack.Location.Y);
             Remote.Visible = true;
             LaserSafe.Visible = true;
             Safe.Visible = true;
