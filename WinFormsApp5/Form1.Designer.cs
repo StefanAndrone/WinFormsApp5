@@ -149,6 +149,9 @@
             this.Back3 = new System.Windows.Forms.PictureBox();
             this.LaserSafe = new System.Windows.Forms.PictureBox();
             this.Remote = new System.Windows.Forms.PictureBox();
+            this.Image6 = new System.Windows.Forms.PictureBox();
+            this.Lose8 = new System.Windows.Forms.PictureBox();
+            this.Back4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -248,6 +251,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LaserSafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Remote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1461,12 +1467,47 @@
             this.Remote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Remote.TabIndex = 120;
             this.Remote.TabStop = false;
+            this.Remote.Click += new System.EventHandler(this.Remote_Click);
+            // 
+            // Image6
+            // 
+            this.Image6.Image = ((System.Drawing.Image)(resources.GetObject("Image6.Image")));
+            this.Image6.Location = new System.Drawing.Point(273, -1);
+            this.Image6.Name = "Image6";
+            this.Image6.Size = new System.Drawing.Size(510, 454);
+            this.Image6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image6.TabIndex = 121;
+            this.Image6.TabStop = false;
+            // 
+            // Lose8
+            // 
+            this.Lose8.Image = ((System.Drawing.Image)(resources.GetObject("Lose8.Image")));
+            this.Lose8.Location = new System.Drawing.Point(0, -4);
+            this.Lose8.Name = "Lose8";
+            this.Lose8.Size = new System.Drawing.Size(783, 457);
+            this.Lose8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose8.TabIndex = 122;
+            this.Lose8.TabStop = false;
+            // 
+            // Back4
+            // 
+            this.Back4.Image = ((System.Drawing.Image)(resources.GetObject("Back4.Image")));
+            this.Back4.Location = new System.Drawing.Point(263, 362);
+            this.Back4.Name = "Back4";
+            this.Back4.Size = new System.Drawing.Size(246, 73);
+            this.Back4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Back4.TabIndex = 123;
+            this.Back4.TabStop = false;
+            this.Back4.Click += new System.EventHandler(this.Back4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Back4);
+            this.Controls.Add(this.Lose8);
+            this.Controls.Add(this.Image6);
             this.Controls.Add(this.Remote);
             this.Controls.Add(this.LaserSafe);
             this.Controls.Add(this.Back3);
@@ -1690,6 +1731,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LaserSafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Remote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1816,5 +1860,8 @@
         private PictureBox Back3;
         private PictureBox LaserSafe;
         private PictureBox Remote;
+        private PictureBox Image6;
+        private PictureBox Lose8;
+        private PictureBox Back4;
     }
 }

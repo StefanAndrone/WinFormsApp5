@@ -33,6 +33,9 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Back4.Visible = false;
+            Lose8.Visible = false;
+            Image6.Visible = false;
             Remote.Visible = false;
             LaserSafe.Visible = false;
             Back3.Visible = false;
@@ -1306,16 +1309,50 @@ namespace WinFormsApp5
 
         private void SafeBack_Click(object sender, EventArgs e)
         {
-            MathProblem.Visible = true;
-            MathProblem.BringToFront();
-            Back3.Visible = true;
-            Back3.BringToFront();
+            if(blocked1 != 1)
+            {
+                MathProblem.Visible = true;
+                MathProblem.BringToFront();
+                Back3.Visible = true;
+                Back3.BringToFront();
+            }        
         }
 
         private void Back3_Click(object sender, EventArgs e)
         {
             Back3.Visible = false;
             MathProblem.Visible = false;
+        }
+
+        private async void Remote_Click(object sender, EventArgs e)
+        {
+            if(blocked1 != 1)
+            {
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                for (int i = 1; i <= 9; i++)
+                {
+                    Robin.Location = new Point(Robin.Location.X + 5, Robin.Location.Y);
+                    await Task.Delay(25);
+                }
+                Image6.Visible = true;
+                await Task.Delay(750);
+                Image6.Visible = Robin.Visible = false;
+                await Task.Delay(1000);
+                Lose8.Visible = true;
+                Lose8.BringToFront();
+                Back4.Visible = true;
+                Back4.BringToFront();
+            }          
+        }
+
+        private void Back4_Click(object sender, EventArgs e)
+        {
+            Lose8.Visible = false;
+            Back4.Visible = false;
+            Robin.Visible = true;
+            Robin.Location = new Point(Robin.Location.X - 45, Robin.Location.Y);
+            blocked1 = 0;
         }
     }
 }
