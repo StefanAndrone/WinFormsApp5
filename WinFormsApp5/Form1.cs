@@ -1354,5 +1354,13 @@ namespace WinFormsApp5
             Robin.Location = new Point(Robin.Location.X - 45, Robin.Location.Y);
             blocked1 = 0;
         }
+
+        private void Safe_Click(object sender, EventArgs e)
+        {
+            Keypad2.Visible = true;
+            Keypad2.BringToFront();
+            Back2.Visible = true;
+            Back2.BringToFront();
+        }
     }
 }

@@ -1415,6 +1415,7 @@
             this.Safe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Safe.TabIndex = 115;
             this.Safe.TabStop = false;
+            this.Safe.Click += new System.EventHandler(this.Safe_Click);
             // 
             // SafeBack
             // 
