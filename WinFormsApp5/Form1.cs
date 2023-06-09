@@ -1357,10 +1357,37 @@ namespace WinFormsApp5
 
         private void Safe_Click(object sender, EventArgs e)
         {
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+            button5.Visible = true;
+            button6.Visible = true;
+            button7.Visible = true;
+            button8.Visible = true;
+            button9.Visible = true;
+            button10.Visible = true;
+            button11.Visible = true;
+            button12.Visible = true;
+            Back2.Visible = true;
             Keypad2.Visible = true;
             Keypad2.BringToFront();
-            Back2.Visible = true;
+            button1.BringToFront();
+            button2.BringToFront();
+            button3.BringToFront();
+            button4.BringToFront();
+            button5.BringToFront();
+            button6.BringToFront();
+            button7.BringToFront();
+            button8.BringToFront();
+            button9.BringToFront();
+            button10.BringToFront();
+            button11.BringToFront();
+            button12.BringToFront();
             Back2.BringToFront();
+            s = "Enter 8 digits";
+            button1.Text = s;
+            s = "";
         }
     }
 }
