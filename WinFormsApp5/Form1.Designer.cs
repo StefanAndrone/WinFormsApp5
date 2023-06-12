@@ -1489,6 +1489,7 @@
             this.Lose8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Lose8.TabIndex = 122;
             this.Lose8.TabStop = false;
+            this.Lose8.Click += new System.EventHandler(this.Lose8_Click);
             // 
             // Back4
             // 

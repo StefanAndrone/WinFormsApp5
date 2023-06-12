@@ -18,6 +18,7 @@ namespace WinFormsApp5
         Button[] slot = new Button[6];
         Button[] but = new Button[6];
         Button Speak = new Button();
+        Button button14 = new Button();
 
         int var;
         int box_taken = 0;
@@ -33,6 +34,8 @@ namespace WinFormsApp5
         string s = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            Controls.Add(button14);
+            button14.Click += button14_Click; 
             Back4.Visible = false;
             Lose8.Visible = false;
             Image6.Visible = false;
@@ -812,6 +815,7 @@ namespace WinFormsApp5
             button11.Visible = false;
             button12.Visible = false;
             button13.Visible = false;
+            button14.Visible = false;
             Back2.Visible = false;
             Keypad2.Visible = false;
         }
@@ -1357,6 +1361,13 @@ namespace WinFormsApp5
 
         private void Safe_Click(object sender, EventArgs e)
         {
+            button14.Location = button13.Location;
+            button14.Width = button3.Width;
+            button14.Height = button3.Height;
+            button14.BackColor = button3.BackColor;
+            button14.Text = "OK";
+            button14.Visible = true;
+
             button1.Visible = true;
             button2.Visible = true;
             button3.Visible = true;
@@ -1384,10 +1395,39 @@ namespace WinFormsApp5
             button10.BringToFront();
             button11.BringToFront();
             button12.BringToFront();
+            button14.BringToFront();
             Back2.BringToFront();
             s = "Enter 8 digits";
             button1.Text = s;
             s = "";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "11302051")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button7.Visible = false;
+                button8.Visible = false;
+                button9.Visible = false;
+                button10.Visible = false;
+                button11.Visible = false;
+                button12.Visible = false;
+                button13.Visible = false;
+                button14.Visible = false;
+                Back2.Visible = false;
+                Keypad2.Visible = false;
+            }
+        }
+
+        private void Lose8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
