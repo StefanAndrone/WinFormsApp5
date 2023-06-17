@@ -152,6 +152,7 @@
             this.Image6 = new System.Windows.Forms.PictureBox();
             this.Lose8 = new System.Windows.Forms.PictureBox();
             this.Back4 = new System.Windows.Forms.PictureBox();
+            this.Magnet = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -254,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Magnet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1502,11 +1504,23 @@
             this.Back4.TabStop = false;
             this.Back4.Click += new System.EventHandler(this.Back4_Click);
             // 
+            // Magnet
+            // 
+            this.Magnet.Image = ((System.Drawing.Image)(resources.GetObject("Magnet.Image")));
+            this.Magnet.Location = new System.Drawing.Point(130, 10);
+            this.Magnet.Name = "Magnet";
+            this.Magnet.Size = new System.Drawing.Size(50, 50);
+            this.Magnet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Magnet.TabIndex = 124;
+            this.Magnet.TabStop = false;
+            this.Magnet.Click += new System.EventHandler(this.Magnet_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Magnet);
             this.Controls.Add(this.Back4);
             this.Controls.Add(this.Lose8);
             this.Controls.Add(this.Image6);
@@ -1736,6 +1750,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Magnet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1865,5 +1880,6 @@
         private PictureBox Image6;
         private PictureBox Lose8;
         private PictureBox Back4;
+        private PictureBox Magnet;
     }
 }

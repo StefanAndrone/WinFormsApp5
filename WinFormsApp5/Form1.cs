@@ -32,8 +32,10 @@ namespace WinFormsApp5
         int i_made_the_ladder_slippery = 0;
         int covered = 0;
         string s = "";
+        int magnet_collected = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Magnet.Visible = false;
             Controls.Add(button14);
             button14.Click += button14_Click; 
             Back4.Visible = false;
@@ -1361,6 +1363,8 @@ namespace WinFormsApp5
 
         private void Safe_Click(object sender, EventArgs e)
         {
+            if (magnet_collected == 1)
+                return;
             button14.Location = button13.Location;
             button14.Width = button3.Width;
             button14.Height = button3.Height;
@@ -1422,12 +1426,26 @@ namespace WinFormsApp5
                 button14.Visible = false;
                 Back2.Visible = false;
                 Keypad2.Visible = false;
+                Magnet.Visible = true;
+                Magnet.BringToFront();
+                magnet_collected = 1;
             }
         }
 
         private void Lose8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Magnet_Click(object sender, EventArgs e)
+        {
+            if (blocked1 == 1)
+                return;
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            Magnet.BringToFront();
+            pictureBox31.Location = new Point(Magnet.Location.X - 5, Magnet.Location.Y - 5);
+            pictureBox31.BackColor = Color.Green;
         }
     }
 }
