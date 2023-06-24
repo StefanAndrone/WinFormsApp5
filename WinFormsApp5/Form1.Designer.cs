@@ -153,6 +153,8 @@
             this.Lose8 = new System.Windows.Forms.PictureBox();
             this.Back4 = new System.Windows.Forms.PictureBox();
             this.Magnet = new System.Windows.Forms.PictureBox();
+            this.Hole2 = new System.Windows.Forms.PictureBox();
+            this.MoonGround = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -256,6 +258,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Magnet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hole2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1515,11 +1519,35 @@
             this.Magnet.TabStop = false;
             this.Magnet.Click += new System.EventHandler(this.Magnet_Click);
             // 
+            // Hole2
+            // 
+            this.Hole2.Image = ((System.Drawing.Image)(resources.GetObject("Hole2.Image")));
+            this.Hole2.Location = new System.Drawing.Point(85, 338);
+            this.Hole2.Name = "Hole2";
+            this.Hole2.Size = new System.Drawing.Size(110, 83);
+            this.Hole2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hole2.TabIndex = 125;
+            this.Hole2.TabStop = false;
+            this.Hole2.Click += new System.EventHandler(this.pictureBox32_Click_2);
+            // 
+            // MoonGround
+            // 
+            this.MoonGround.Image = ((System.Drawing.Image)(resources.GetObject("MoonGround.Image")));
+            this.MoonGround.Location = new System.Drawing.Point(85, 338);
+            this.MoonGround.Name = "MoonGround";
+            this.MoonGround.Size = new System.Drawing.Size(110, 83);
+            this.MoonGround.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MoonGround.TabIndex = 126;
+            this.MoonGround.TabStop = false;
+            this.MoonGround.Click += new System.EventHandler(this.MoonGround_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.MoonGround);
+            this.Controls.Add(this.Hole2);
             this.Controls.Add(this.Magnet);
             this.Controls.Add(this.Back4);
             this.Controls.Add(this.Lose8);
@@ -1751,6 +1779,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lose8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Magnet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hole2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1881,5 +1911,7 @@
         private PictureBox Lose8;
         private PictureBox Back4;
         private PictureBox Magnet;
+        private PictureBox Hole2;
+        private PictureBox MoonGround;
     }
 }

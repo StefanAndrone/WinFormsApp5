@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Windows.Forms;
 
 namespace WinFormsApp5
 {
@@ -35,6 +36,8 @@ namespace WinFormsApp5
         int magnet_collected = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Hole2.Visible = false;
+            MoonGround.Visible = false;
             Magnet.Visible = false;
             Controls.Add(button14);
             button14.Click += button14_Click; 
@@ -312,6 +315,8 @@ namespace WinFormsApp5
                 Robin.Location = new Point(Robin.Location.X - 100, Robin.Location.Y);
                 Safe.Location = new Point(Safe.Location.X + 100, Safe.Location.Y);
                 SafeBack.Location = new Point(SafeBack.Location.X + 100, SafeBack.Location.Y);
+                Hole2.Visible = false;
+                MoonGround.Visible = false;
                 return;
             }
             Lose1.Visible = false;
@@ -1310,6 +1315,10 @@ namespace WinFormsApp5
             DownArrow.Visible = false;
             RightArrow.Visible = false;
             LeftArrow.Visible = true;
+            Hole2.Visible = true;
+            Hole2.BringToFront();
+            MoonGround.Visible = true;
+            MoonGround.BringToFront();
             var = 11;
         }
 
@@ -1446,6 +1455,21 @@ namespace WinFormsApp5
             Magnet.BringToFront();
             pictureBox31.Location = new Point(Magnet.Location.X - 5, Magnet.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
+        }
+
+        private void pictureBox32_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MoonGround_Click(object sender, EventArgs e)
+        {
+            if(pictureBox31.Location.X == ShovelPB.Location.X - 5 && pictureBox31.Location.Y == ShovelPB.Location.Y - 5)
+            {
+                pictureBox31.Visible = false;
+                MoonGround.Dispose();
+                return;
+            }
         }
     }
 }
