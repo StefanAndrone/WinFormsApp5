@@ -155,6 +155,7 @@
             this.Magnet = new System.Windows.Forms.PictureBox();
             this.Hole2 = new System.Windows.Forms.PictureBox();
             this.MoonGround = new System.Windows.Forms.PictureBox();
+            this.SmallUpArrow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -260,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Magnet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hole2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SmallUpArrow)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1541,11 +1543,23 @@
             this.MoonGround.TabStop = false;
             this.MoonGround.Click += new System.EventHandler(this.MoonGround_Click);
             // 
+            // SmallUpArrow
+            // 
+            this.SmallUpArrow.Image = ((System.Drawing.Image)(resources.GetObject("SmallUpArrow.Image")));
+            this.SmallUpArrow.Location = new System.Drawing.Point(201, 338);
+            this.SmallUpArrow.Name = "SmallUpArrow";
+            this.SmallUpArrow.Size = new System.Drawing.Size(32, 30);
+            this.SmallUpArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SmallUpArrow.TabIndex = 127;
+            this.SmallUpArrow.TabStop = false;
+            this.SmallUpArrow.Click += new System.EventHandler(this.SmallUpArrow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.SmallUpArrow);
             this.Controls.Add(this.MoonGround);
             this.Controls.Add(this.Hole2);
             this.Controls.Add(this.Magnet);
@@ -1781,6 +1795,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Magnet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hole2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SmallUpArrow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1913,5 +1928,6 @@
         private PictureBox Magnet;
         private PictureBox Hole2;
         private PictureBox MoonGround;
+        private PictureBox SmallUpArrow;
     }
 }

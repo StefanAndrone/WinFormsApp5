@@ -5,6 +5,7 @@ using System.IO;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Windows.Forms;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace WinFormsApp5
 {
@@ -34,8 +35,10 @@ namespace WinFormsApp5
         int covered = 0;
         string s = "";
         int magnet_collected = 0;
+        int Robin_in_hole = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            SmallUpArrow.Visible = false;
             Hole2.Visible = false;
             MoonGround.Visible = false;
             Magnet.Visible = false;
@@ -273,6 +276,8 @@ namespace WinFormsApp5
         private void LeftArrow_Click(object sender, EventArgs e)
         {
             if (blocked1 == 1 || blocked2 == 1)
+                return;
+            if (Robin_in_hole == 1)
                 return;
             if (var == 9)
             {
@@ -1324,6 +1329,8 @@ namespace WinFormsApp5
 
         private void SafeBack_Click(object sender, EventArgs e)
         {
+            if (Robin_in_hole == 1)
+                return;
             if(blocked1 != 1)
             {
                 MathProblem.Visible = true;
@@ -1341,6 +1348,10 @@ namespace WinFormsApp5
 
         private async void Remote_Click(object sender, EventArgs e)
         {
+            if(Robin_in_hole == 1)
+            {
+                return;
+            }
             if(blocked1 != 1)
             {
                 blocked1 = 1;
@@ -1372,6 +1383,10 @@ namespace WinFormsApp5
 
         private void Safe_Click(object sender, EventArgs e)
         {
+            if(Robin_in_hole == 1)
+            {
+                return;
+            }
             if (magnet_collected == 1)
                 return;
             button14.Location = button13.Location;
@@ -1459,7 +1474,10 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click_2(object sender, EventArgs e)
         {
-
+            SmallUpArrow.Visible = true;
+            SmallUpArrow.BringToFront();
+            Robin.Visible = false;
+            Robin_in_hole = 1;
         }
 
         private void MoonGround_Click(object sender, EventArgs e)
@@ -1470,6 +1488,13 @@ namespace WinFormsApp5
                 MoonGround.Dispose();
                 return;
             }
+        }
+
+        private void SmallUpArrow_Click(object sender, EventArgs e)
+        {
+            Robin_in_hole = 0;
+            Robin.Visible = true;
+            SmallUpArrow.Visible = false;
         }
     }
 }
