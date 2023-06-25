@@ -156,6 +156,10 @@
             this.Hole2 = new System.Windows.Forms.PictureBox();
             this.MoonGround = new System.Windows.Forms.PictureBox();
             this.SmallUpArrow = new System.Windows.Forms.PictureBox();
+            this.Image7 = new System.Windows.Forms.PictureBox();
+            this.RemotePB = new System.Windows.Forms.PictureBox();
+            this.Image8 = new System.Windows.Forms.PictureBox();
+            this.Lose9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -262,6 +266,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Hole2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmallUpArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemotePB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose9)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1554,11 +1562,55 @@
             this.SmallUpArrow.TabStop = false;
             this.SmallUpArrow.Click += new System.EventHandler(this.SmallUpArrow_Click);
             // 
+            // Image7
+            // 
+            this.Image7.Image = ((System.Drawing.Image)(resources.GetObject("Image7.Image")));
+            this.Image7.Location = new System.Drawing.Point(255, 197);
+            this.Image7.Name = "Image7";
+            this.Image7.Size = new System.Drawing.Size(473, 192);
+            this.Image7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image7.TabIndex = 128;
+            this.Image7.TabStop = false;
+            // 
+            // RemotePB
+            // 
+            this.RemotePB.Image = ((System.Drawing.Image)(resources.GetObject("RemotePB.Image")));
+            this.RemotePB.Location = new System.Drawing.Point(130, 70);
+            this.RemotePB.Name = "RemotePB";
+            this.RemotePB.Size = new System.Drawing.Size(50, 50);
+            this.RemotePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RemotePB.TabIndex = 129;
+            this.RemotePB.TabStop = false;
+            // 
+            // Image8
+            // 
+            this.Image8.Image = ((System.Drawing.Image)(resources.GetObject("Image8.Image")));
+            this.Image8.Location = new System.Drawing.Point(255, 14);
+            this.Image8.Name = "Image8";
+            this.Image8.Size = new System.Drawing.Size(473, 375);
+            this.Image8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image8.TabIndex = 130;
+            this.Image8.TabStop = false;
+            // 
+            // Lose9
+            // 
+            this.Lose9.Image = ((System.Drawing.Image)(resources.GetObject("Lose9.Image")));
+            this.Lose9.Location = new System.Drawing.Point(-20, -1);
+            this.Lose9.Name = "Lose9";
+            this.Lose9.Size = new System.Drawing.Size(816, 475);
+            this.Lose9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose9.TabIndex = 131;
+            this.Lose9.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Lose9);
+            this.Controls.Add(this.Image8);
+            this.Controls.Add(this.RemotePB);
+            this.Controls.Add(this.Image7);
             this.Controls.Add(this.SmallUpArrow);
             this.Controls.Add(this.MoonGround);
             this.Controls.Add(this.Hole2);
@@ -1796,6 +1848,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Hole2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoonGround)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmallUpArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemotePB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1929,5 +1985,9 @@
         private PictureBox Hole2;
         private PictureBox MoonGround;
         private PictureBox SmallUpArrow;
+        private PictureBox Image7;
+        private PictureBox RemotePB;
+        private PictureBox Image8;
+        private PictureBox Lose9;
     }
 }

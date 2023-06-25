@@ -38,6 +38,10 @@ namespace WinFormsApp5
         int Robin_in_hole = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lose9.Visible = false;
+            Image8.Visible = false;
+            RemotePB.Visible = false;
+            Image7.Visible = false;
             SmallUpArrow.Visible = false;
             Hole2.Visible = false;
             MoonGround.Visible = false;
@@ -1236,7 +1240,7 @@ namespace WinFormsApp5
 
         private void Black_Click(object sender, EventArgs e)
         {
-            if(pictureBox31.Location.X == PlankPB.Location.X - 5 && pictureBox31.Location.Y == PlankPB.Location.Y - 5)
+            if(pictureBox31.Visible == true && pictureBox31.Location.X == PlankPB.Location.X - 5 && pictureBox31.Location.Y == PlankPB.Location.Y - 5)
             {
                 swap_pictures(PlankPB, SkatePB);
                 PlankPB.Visible = false;
@@ -1263,7 +1267,7 @@ namespace WinFormsApp5
 
         private async void Plank2_Click(object sender, EventArgs e)
         {
-            if(pictureBox31.Location.X == StaffPB.Location.X - 5 && pictureBox31.Location.Y == StaffPB.Location.Y - 5)
+            if(pictureBox31.Visible == true && pictureBox31.Location.X == StaffPB.Location.X - 5 && pictureBox31.Location.Y == StaffPB.Location.Y - 5)
             {
                 pictureBox31.Visible = false;
                 blocked1 = 1;
@@ -1354,6 +1358,29 @@ namespace WinFormsApp5
             }
             if(blocked1 != 1)
             {
+                if(pictureBox31.Visible == true && pictureBox31.Location.X == Magnet.Location.X - 5 && pictureBox31.Location.Y == Magnet.Location.Y - 5)
+                {
+                    blocked1 = 1;
+                    pictureBox31.Visible = false;
+                    Image7.Visible = true;
+                    Image7.BringToFront();
+                    await Task.Delay(1000);
+                    Image7.Visible = false;
+                    Remote.Visible = false;
+                    RemotePB.Visible = true;
+                    RemotePB.BringToFront();
+                    await Task.Delay(1000);
+                    Image8.Visible = true;
+                    await Task.Delay(1000);
+                    Image8.Visible = false;
+                    Robin.Visible = false;
+                    await Task.Delay(1000);
+                    Lose9.Visible = true;
+                    Lose9.BringToFront();
+                    Back4.Visible = true;
+                    Back4.BringToFront();
+                    return;
+                }
                 blocked1 = 1;
                 pictureBox31.Visible = false;
                 for (int i = 1; i <= 9; i++)
@@ -1374,6 +1401,15 @@ namespace WinFormsApp5
 
         private void Back4_Click(object sender, EventArgs e)
         {
+            if(Lose9.Visible == true)
+            {                                   
+                blocked1 = 0;
+                Lose9.Visible = Back4.Visible = false;
+                Remote.Visible = true;
+                RemotePB.Visible = false;
+                Robin.Visible = true;
+                return;
+            }
             Lose8.Visible = false;
             Back4.Visible = false;
             Robin.Visible = true;
@@ -1474,6 +1510,8 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click_2(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             SmallUpArrow.Visible = true;
             SmallUpArrow.BringToFront();
             Robin.Visible = false;
@@ -1482,7 +1520,7 @@ namespace WinFormsApp5
 
         private void MoonGround_Click(object sender, EventArgs e)
         {
-            if(pictureBox31.Location.X == ShovelPB.Location.X - 5 && pictureBox31.Location.Y == ShovelPB.Location.Y - 5)
+            if(pictureBox31.Visible == true && pictureBox31.Location.X == ShovelPB.Location.X - 5 && pictureBox31.Location.Y == ShovelPB.Location.Y - 5)
             {
                 pictureBox31.Visible = false;
                 MoonGround.Dispose();
