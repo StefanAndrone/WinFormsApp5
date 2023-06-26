@@ -160,6 +160,7 @@
             this.RemotePB = new System.Windows.Forms.PictureBox();
             this.Image8 = new System.Windows.Forms.PictureBox();
             this.Lose9 = new System.Windows.Forms.PictureBox();
+            this.Image9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -270,6 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RemotePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image9)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1581,6 +1583,7 @@
             this.RemotePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RemotePB.TabIndex = 129;
             this.RemotePB.TabStop = false;
+            this.RemotePB.Click += new System.EventHandler(this.RemotePB_Click);
             // 
             // Image8
             // 
@@ -1595,18 +1598,29 @@
             // Lose9
             // 
             this.Lose9.Image = ((System.Drawing.Image)(resources.GetObject("Lose9.Image")));
-            this.Lose9.Location = new System.Drawing.Point(-20, -1);
+            this.Lose9.Location = new System.Drawing.Point(-20, 0);
             this.Lose9.Name = "Lose9";
             this.Lose9.Size = new System.Drawing.Size(816, 475);
             this.Lose9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Lose9.TabIndex = 131;
             this.Lose9.TabStop = false;
             // 
+            // Image9
+            // 
+            this.Image9.Image = ((System.Drawing.Image)(resources.GetObject("Image9.Image")));
+            this.Image9.Location = new System.Drawing.Point(0, 130);
+            this.Image9.Name = "Image9";
+            this.Image9.Size = new System.Drawing.Size(783, 323);
+            this.Image9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image9.TabIndex = 132;
+            this.Image9.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Image9);
             this.Controls.Add(this.Lose9);
             this.Controls.Add(this.Image8);
             this.Controls.Add(this.RemotePB);
@@ -1852,6 +1866,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RemotePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1989,5 +2004,6 @@
         private PictureBox RemotePB;
         private PictureBox Image8;
         private PictureBox Lose9;
+        private PictureBox Image9;
     }
 }

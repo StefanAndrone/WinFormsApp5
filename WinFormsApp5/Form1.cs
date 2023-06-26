@@ -36,8 +36,10 @@ namespace WinFormsApp5
         string s = "";
         int magnet_collected = 0;
         int Robin_in_hole = 0;
+        int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Image9.Visible = false;
             Lose9.Visible = false;
             Image8.Visible = false;
             RemotePB.Visible = false;
@@ -1354,6 +1356,45 @@ namespace WinFormsApp5
         {
             if(Robin_in_hole == 1)
             {
+                if (pictureBox31.Visible == true && pictureBox31.Location.X == Magnet.Location.X - 5 && pictureBox31.Location.Y == Magnet.Location.Y - 5)
+                {
+                    pictureBox31.Visible = false;
+                    blocked1 = 1;
+                    Hole2.Visible = false;
+                    SmallUpArrow.Visible = false;
+                    Image9.Visible = true;
+                    await Task.Delay(1000);
+                    Image9.Visible = false;
+                    Remote.Visible = false;
+                    RemotePB.Visible = true;
+                    RemotePB.BringToFront();
+                    Speak.Visible = true;
+                    Speak.Location = new Point(200, 265);
+                    Speak.Height = Speak.Height + 40;
+                    Speak.Width = Speak.Width + 30;
+                    Hole2.Visible = true;
+                    Speak.Text = "Let's see what this remote does...";
+                    await Task.Delay(3500);
+                    Speak.Text = "It's written here that its role is to control Seemore's devices, including this laser and... the equipment Seemore is wearing?! Interesting...";
+                    await Task.Delay(6000);
+                    Speak.Text = "Alright, this laser is off. Let's get out of here...";
+                    await Task.Delay(3500);
+                    Speak.Visible = false;
+                    LaserSafe.Visible = false;
+                    Safe.Visible = false;
+                    SafeBack.Visible = false;
+                    RedLine3.Visible = false;
+                    RightArrow.Visible = true;
+                    LeftArrow.Visible = false;
+                    Hole2.Visible = false;
+                    blocked1 = 0;
+                    Robin.Visible = true;
+                    Robin.Location = new Point(Robin.Location.X - 100, Robin.Location.Y);
+                    var = 10;
+                    laser_defeated = 1;
+                    DownArrow.Dispose();
+                    return;
+                }
                 return;
             }
             if(blocked1 != 1)
@@ -1533,6 +1574,16 @@ namespace WinFormsApp5
             Robin_in_hole = 0;
             Robin.Visible = true;
             SmallUpArrow.Visible = false;
+        }
+
+        private void RemotePB_Click(object sender, EventArgs e)
+        {
+            if(laser_defeated == 1)
+            {
+                pictureBox31.Location = new Point(RemotePB.Location.X - 5, RemotePB.Location.Y - 5);
+                return;
+            }
+            return;
         }
     }
 }
