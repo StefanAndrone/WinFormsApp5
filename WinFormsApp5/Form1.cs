@@ -1580,7 +1580,11 @@ namespace WinFormsApp5
         {
             if(laser_defeated == 1)
             {
-                pictureBox31.Location = new Point(RemotePB.Location.X - 5, RemotePB.Location.Y - 5);
+                pictureBox31.Visible = true;
+                pictureBox31.BringToFront();
+                RemotePB.BringToFront();
+                pictureBox31.Location = new Point(Magnet.Location.X - 5, Magnet.Location.Y - 5);
+                pictureBox31.BackColor = Color.Green;
                 return;
             }
             return;
