@@ -1305,7 +1305,13 @@ namespace WinFormsApp5
 
         private void pictureBox32_Click(object sender, EventArgs e)
         {
-
+            /*if (pictureBox31.Visible == true && pictureBox31.Location.X == RemotePB.Location.X - 5 && pictureBox31.Location.Y == RemotePB.Location.Y - 5)
+            {
+                pictureBox31.Visible = false;
+                Lose7.Dispose();
+                SeemoreLaser.Dispose();
+                timebut.Visible = false;
+            }*/
         }
 
         private void SeemoreLaser_Click(object sender, EventArgs e)
@@ -1577,13 +1583,15 @@ namespace WinFormsApp5
         }
 
         private void RemotePB_Click(object sender, EventArgs e)
-        {
+        {           
             if(laser_defeated == 1)
             {
+                if (blocked1 == 1)
+                    return;
                 pictureBox31.Visible = true;
                 pictureBox31.BringToFront();
                 RemotePB.BringToFront();
-                pictureBox31.Location = new Point(Magnet.Location.X - 5, Magnet.Location.Y - 5);
+                pictureBox31.Location = new Point(RemotePB.Location.X - 5, RemotePB.Location.Y - 5);
                 pictureBox31.BackColor = Color.Green;
                 return;
             }
