@@ -161,6 +161,8 @@
             this.Image8 = new System.Windows.Forms.PictureBox();
             this.Lose9 = new System.Windows.Forms.PictureBox();
             this.Image9 = new System.Windows.Forms.PictureBox();
+            this.RobinWithRemote = new System.Windows.Forms.PictureBox();
+            this.SeemoreFurious = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -272,6 +274,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1615,11 +1619,33 @@
             this.Image9.TabIndex = 132;
             this.Image9.TabStop = false;
             // 
+            // RobinWithRemote
+            // 
+            this.RobinWithRemote.Image = ((System.Drawing.Image)(resources.GetObject("RobinWithRemote.Image")));
+            this.RobinWithRemote.Location = new System.Drawing.Point(103, 197);
+            this.RobinWithRemote.Name = "RobinWithRemote";
+            this.RobinWithRemote.Size = new System.Drawing.Size(188, 187);
+            this.RobinWithRemote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RobinWithRemote.TabIndex = 133;
+            this.RobinWithRemote.TabStop = false;
+            // 
+            // SeemoreFurious
+            // 
+            this.SeemoreFurious.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreFurious.Image")));
+            this.SeemoreFurious.Location = new System.Drawing.Point(550, 152);
+            this.SeemoreFurious.Name = "SeemoreFurious";
+            this.SeemoreFurious.Size = new System.Drawing.Size(125, 267);
+            this.SeemoreFurious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreFurious.TabIndex = 134;
+            this.SeemoreFurious.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.SeemoreFurious);
+            this.Controls.Add(this.RobinWithRemote);
             this.Controls.Add(this.Image9);
             this.Controls.Add(this.Lose9);
             this.Controls.Add(this.Image8);
@@ -1867,6 +1893,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lose9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2005,5 +2033,7 @@
         private PictureBox Image8;
         private PictureBox Lose9;
         private PictureBox Image9;
+        private PictureBox RobinWithRemote;
+        private PictureBox SeemoreFurious;
     }
 }

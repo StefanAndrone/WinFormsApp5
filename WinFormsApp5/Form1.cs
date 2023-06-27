@@ -39,6 +39,8 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            SeemoreFurious.Visible = false;
+            RobinWithRemote.Visible = false;
             Image9.Visible = false;
             Lose9.Visible = false;
             Image8.Visible = false;
@@ -1303,15 +1305,49 @@ namespace WinFormsApp5
             }        
         }
 
-        private void pictureBox32_Click(object sender, EventArgs e)
+        private async void pictureBox32_Click(object sender, EventArgs e)
         {
-            /*if (pictureBox31.Visible == true && pictureBox31.Location.X == RemotePB.Location.X - 5 && pictureBox31.Location.Y == RemotePB.Location.Y - 5)
+            if (pictureBox31.Visible == true && pictureBox31.Location.X == RemotePB.Location.X - 5 && pictureBox31.Location.Y == RemotePB.Location.Y - 5)
             {
+                blocked1 = 1;
                 pictureBox31.Visible = false;
                 Lose7.Dispose();
                 SeemoreLaser.Dispose();
                 timebut.Visible = false;
-            }*/
+                RobinWithRemote.Visible = true;
+                Back.Location = new Point(10000, 10000);
+                SeemoreLeft.Location = new Point(10000, 10000);
+                await Task.Delay(1000);
+                SeemoreLeft.Location = new Point(SeemoreRight.Location.X, SeemoreRight.Location.Y);
+                await Task.Delay(500);
+                Speak.Visible = true;
+                Speak.Location = new Point(356, 105);
+                SeemoreFurious.Visible = true;
+                SeemoreFurious.BringToFront();
+                Speak.BringToFront();
+                Speak.Text = "My beam... it worked a few minutes ago... This isn't happening...";
+                await Task.Delay(3500);
+                Speak.Text = "You! Give me back my remote!!! It's not yours! It's private property!";
+                await Task.Delay(3500);
+                Speak.Location = new Point(Speak.Location.X - 100, Speak.Location.Y);
+                Speak.Text = "Too bad, See-more... Too bad...";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "Whatever. At least here I can't be imprisoned...";
+                await Task.Delay(3500);
+                Speak.Location = new Point(Speak.Location.X - 100, Speak.Location.Y);
+                Speak.Text = "Let's keep moving now...";
+                await Task.Delay(3500);
+                SeemoreLeft.Visible = false;
+                SeemoreRight.Visible = false;
+                SeemoreFurious.Visible = false;
+                RobinWithRemote.Visible = false;
+                Robin.Visible = true;
+                RightArrow.Visible = true;
+                blocked1 = 0;
+                Speak.Visible = false;
+                var = 12;
+            }
         }
 
         private void SeemoreLaser_Click(object sender, EventArgs e)
@@ -1381,7 +1417,7 @@ namespace WinFormsApp5
                     Hole2.Visible = true;
                     Speak.Text = "Let's see what this remote does...";
                     await Task.Delay(3500);
-                    Speak.Text = "It's written here that its role is to control Seemore's devices, including this laser and... the equipment Seemore is wearing?! Interesting...";
+                    Speak.Text = "It's written here that its role is to control See-more's devices, including this laser and... the equipment See-more is wearing?! Interesting...";
                     await Task.Delay(6000);
                     Speak.Text = "Alright, this laser is off. Let's get out of here...";
                     await Task.Delay(3500);
