@@ -163,6 +163,7 @@
             this.Image9 = new System.Windows.Forms.PictureBox();
             this.RobinWithRemote = new System.Windows.Forms.PictureBox();
             this.SeemoreFurious = new System.Windows.Forms.PictureBox();
+            this.SeemorePB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -276,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemorePB)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1639,11 +1641,23 @@
             this.SeemoreFurious.TabIndex = 134;
             this.SeemoreFurious.TabStop = false;
             // 
+            // SeemorePB
+            // 
+            this.SeemorePB.Image = ((System.Drawing.Image)(resources.GetObject("SeemorePB.Image")));
+            this.SeemorePB.Location = new System.Drawing.Point(130, 70);
+            this.SeemorePB.Name = "SeemorePB";
+            this.SeemorePB.Size = new System.Drawing.Size(50, 50);
+            this.SeemorePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemorePB.TabIndex = 135;
+            this.SeemorePB.TabStop = false;
+            this.SeemorePB.Click += new System.EventHandler(this.SeemorePB_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.SeemorePB);
             this.Controls.Add(this.SeemoreFurious);
             this.Controls.Add(this.RobinWithRemote);
             this.Controls.Add(this.Image9);
@@ -1895,6 +1909,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Image9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemorePB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2035,5 +2050,6 @@
         private PictureBox Image9;
         private PictureBox RobinWithRemote;
         private PictureBox SeemoreFurious;
+        private PictureBox SeemorePB;
     }
 }

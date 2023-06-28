@@ -39,6 +39,7 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            SeemorePB.Visible = false;
             SeemoreFurious.Visible = false;
             RobinWithRemote.Visible = false;
             Image9.Visible = false;
@@ -278,6 +279,74 @@ namespace WinFormsApp5
                 Lose7.BringToFront();
                 Back.Visible = true;
                 Back.BringToFront();
+            }
+            else if(var == 12)
+            {
+                // Speak.Location = new Point(356, 105);
+                blocked1 = 1;
+                for (int i = 1; i <= 27; i++)
+                {
+                    Robin.Location = new Point(Robin.Location.X + 5, Robin.Location.Y);
+                    await Task.Delay(25);
+                }
+                pictureBox31.Visible = false;
+                Speak.Visible = true;
+                Speak.Text = "Wait a minute. I think I can finally find out the explanation why I am here on the Moon instead of, I don't know, my bed...";
+                Speak.Location = new Point(361, 105);
+                await Task.Delay(3500);
+                Speak.Text = "I should go back to See-more...";
+                await Task.Delay(3500);
+                RightArrow.Visible = false;
+                SeemoreFurious.Visible = true;
+                Robin.Location = new Point(Robin.Location.X - 135, Robin.Location.Y);
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "Who's behind this, See-more? What am I doing on the Moon?";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "If you give me back my remote, I will tell you.";
+                await Task.Delay(3500);
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "If I give you back the remote, I'm dead.";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "Honestly, I wouldn't want to kill you, or anyone... I've changed. But I must kill you if I want to survive...";
+                await Task.Delay(3500);
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "Survive who? Is it that bad?";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "If I tell you we're both dead.";
+                await Task.Delay(3500);
+                Speak.Location = new Point(256, 105);
+                Speak.Height = Speak.Height + 40;
+                Speak.Text = "Are they that powerful? I've defeated Predator, Mad Mod, you, and a couple of lasers without superpowers, and you are a pretty good hacker. How bad could it be?";
+                await Task.Delay(3500);
+                Speak.Height = Speak.Height - 40;
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "Predator and Mad Mod? I guess I underestimated you... Alright. It's Brother Blood. Brother Blood brought both of us here.";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "He brought me to kill you, and you... to die here without a trace. I didn't know about Predator and Mad Mod, though...";
+                await Task.Delay(3500);
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "If you and I work together, he'd go down... Also, I presume he has a spaceship?";
+                await Task.Delay(3500);
+                Speak.Location = new Point(356, 105);
+                Speak.Text = "Brother Blood could have teleported, but let's hope that... Please give me a chance. I will prove myself helpful.";
+                await Task.Delay(3500);
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "Alright. Let's find Brother Blood!";
+                await Task.Delay(3500);
+                SeemoreFurious.Visible = false;
+                Speak.Location = new Point(256, 105);
+                Speak.Text = "Now Seemore will be in the inventory instead of his remote.";
+                await Task.Delay(3500);
+                SeemorePB.Visible = true;
+                SeemorePB.BringToFront();
+                blocked1 = 0;
+                RightArrow.Visible = true;
+                Speak.Visible = false;
+                var = 13;
             }
         }
 
@@ -1632,6 +1701,17 @@ namespace WinFormsApp5
                 return;
             }
             return;
+        }
+
+        private void SeemorePB_Click(object sender, EventArgs e)
+        {
+            if (blocked1 == 1)
+                return;
+            pictureBox31.Visible = true;
+            pictureBox31.BringToFront();
+            SeemorePB.BringToFront();
+            pictureBox31.Location = new Point(SeemorePB.Location.X - 5, SeemorePB.Location.Y - 5);
+            pictureBox31.BackColor = Color.Green;
         }
     }
 }
