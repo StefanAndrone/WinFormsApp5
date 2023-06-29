@@ -39,6 +39,10 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            SeemoreLaser2.Visible = SeemoreTrying.Visible = false;
+            //MessageBox.Show(Convert.ToString(SeemoreRight.Width), Convert.ToString(SeemoreRight.Height));
+            Top.Visible = false;
+            Bottom.Visible = false;
             SeemorePB.Visible = false;
             SeemoreFurious.Visible = false;
             RobinWithRemote.Visible = false;
@@ -347,6 +351,12 @@ namespace WinFormsApp5
                 RightArrow.Visible = true;
                 Speak.Visible = false;
                 var = 13;
+            }
+            else if(var == 13)
+            {
+                RightArrow.Visible = false;
+                Top.Visible = true;
+                Bottom.Visible = true;
             }
         }
 
@@ -1712,6 +1722,29 @@ namespace WinFormsApp5
             SeemorePB.BringToFront();
             pictureBox31.Location = new Point(SeemorePB.Location.X - 5, SeemorePB.Location.Y - 5);
             pictureBox31.BackColor = Color.Green;
+        }
+
+        private async void Top_Click(object sender, EventArgs e)
+        {
+            if(pictureBox31.Visible == true && pictureBox31.Location.X == SeemorePB.Location.X - 5 && pictureBox31.Location.Y == SeemorePB.Location.Y - 5)
+            {
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                SeemoreTrying.Visible = true;
+                await Task.Delay(1500);
+                SeemoreLaser2.Visible = true;
+                await Task.Delay(1500);
+                SeemoreLaser2.Visible = false;
+                Speak.Visible = true;
+                Speak.BringToFront();
+                Speak.Location = new Point(130, 133);
+                Speak.Text = "It resists to my beam?! Seriously?";
+                Speak.Height = 60;
+                Speak.Width = 200;
+                await Task.Delay(3500);
+                Speak.Visible = SeemoreTrying.Visible = false;
+                blocked1 = 0;
+            }
         }
     }
 }

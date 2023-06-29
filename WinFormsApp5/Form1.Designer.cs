@@ -164,6 +164,10 @@
             this.RobinWithRemote = new System.Windows.Forms.PictureBox();
             this.SeemoreFurious = new System.Windows.Forms.PictureBox();
             this.SeemorePB = new System.Windows.Forms.PictureBox();
+            this.Top = new System.Windows.Forms.PictureBox();
+            this.Bottom = new System.Windows.Forms.PictureBox();
+            this.SeemoreTrying = new System.Windows.Forms.PictureBox();
+            this.SeemoreLaser2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -278,6 +282,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemorePB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreTrying)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1652,11 +1659,57 @@
             this.SeemorePB.TabStop = false;
             this.SeemorePB.Click += new System.EventHandler(this.SeemorePB_Click);
             // 
+            // Top
+            // 
+            this.Top.Image = ((System.Drawing.Image)(resources.GetObject("Top.Image")));
+            this.Top.Location = new System.Drawing.Point(552, 62);
+            this.Top.Name = "Top";
+            this.Top.Size = new System.Drawing.Size(125, 242);
+            this.Top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Top.TabIndex = 136;
+            this.Top.TabStop = false;
+            this.Top.Click += new System.EventHandler(this.Top_Click);
+            // 
+            // Bottom
+            // 
+            this.Bottom.Image = ((System.Drawing.Image)(resources.GetObject("Bottom.Image")));
+            this.Bottom.Location = new System.Drawing.Point(540, 303);
+            this.Bottom.Name = "Bottom";
+            this.Bottom.Size = new System.Drawing.Size(147, 130);
+            this.Bottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bottom.TabIndex = 137;
+            this.Bottom.TabStop = false;
+            // 
+            // SeemoreTrying
+            // 
+            this.SeemoreTrying.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreTrying.Image")));
+            this.SeemoreTrying.Location = new System.Drawing.Point(40, 151);
+            this.SeemoreTrying.Name = "SeemoreTrying";
+            this.SeemoreTrying.Size = new System.Drawing.Size(120, 268);
+            this.SeemoreTrying.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreTrying.TabIndex = 138;
+            this.SeemoreTrying.TabStop = false;
+            // 
+            // SeemoreLaser2
+            // 
+            this.SeemoreLaser2.BackColor = System.Drawing.Color.Red;
+            this.SeemoreLaser2.FlatAppearance.BorderSize = 0;
+            this.SeemoreLaser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SeemoreLaser2.Location = new System.Drawing.Point(105, 186);
+            this.SeemoreLaser2.Name = "SeemoreLaser2";
+            this.SeemoreLaser2.Size = new System.Drawing.Size(484, 16);
+            this.SeemoreLaser2.TabIndex = 139;
+            this.SeemoreLaser2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.SeemoreLaser2);
+            this.Controls.Add(this.SeemoreTrying);
+            this.Controls.Add(this.Bottom);
+            this.Controls.Add(this.Top);
             this.Controls.Add(this.SeemorePB);
             this.Controls.Add(this.SeemoreFurious);
             this.Controls.Add(this.RobinWithRemote);
@@ -1910,6 +1963,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RobinWithRemote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreFurious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemorePB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreTrying)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2051,5 +2107,9 @@
         private PictureBox RobinWithRemote;
         private PictureBox SeemoreFurious;
         private PictureBox SeemorePB;
+        private PictureBox Top;
+        private PictureBox Bottom;
+        private PictureBox SeemoreTrying;
+        private Button SeemoreLaser2;
     }
 }
