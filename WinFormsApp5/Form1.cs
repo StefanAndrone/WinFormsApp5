@@ -39,6 +39,8 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Warning.Visible = false;
+            Sign.Visible = false;
             HoleUnderWall.Visible = false;
             Image10.Visible = false;
             SeemoreLaser2.Visible = SeemoreTrying.Visible = false;
@@ -1473,6 +1475,7 @@ namespace WinFormsApp5
         {
             Back3.Visible = false;
             MathProblem.Visible = false;
+            Warning.Visible = false;
         }
 
         private async void Remote_Click(object sender, EventArgs e)
@@ -1790,8 +1793,17 @@ namespace WinFormsApp5
                 RightArrow.Visible = true;
                 var = 14;
                 blocked1 = 0;
+                Sign.Visible = true;
                 return;
             }
+        }
+
+        private void Sign_Click(object sender, EventArgs e)
+        {
+            Warning.Visible = true;
+            Warning.BringToFront();
+            Back3.Visible = true;
+            Back3.BringToFront();
         }
     }
 }

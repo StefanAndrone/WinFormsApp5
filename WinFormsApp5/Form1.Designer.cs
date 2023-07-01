@@ -170,6 +170,8 @@
             this.SeemoreLaser2 = new System.Windows.Forms.Button();
             this.Image10 = new System.Windows.Forms.PictureBox();
             this.HoleUnderWall = new System.Windows.Forms.PictureBox();
+            this.Sign = new System.Windows.Forms.PictureBox();
+            this.Warning = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -289,6 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreTrying)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HoleUnderWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sign)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Warning)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1726,11 +1730,34 @@
             this.HoleUnderWall.TabIndex = 141;
             this.HoleUnderWall.TabStop = false;
             // 
+            // Sign
+            // 
+            this.Sign.Image = ((System.Drawing.Image)(resources.GetObject("Sign.Image")));
+            this.Sign.Location = new System.Drawing.Point(514, 124);
+            this.Sign.Name = "Sign";
+            this.Sign.Size = new System.Drawing.Size(184, 195);
+            this.Sign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sign.TabIndex = 142;
+            this.Sign.TabStop = false;
+            this.Sign.Click += new System.EventHandler(this.Sign_Click);
+            // 
+            // Warning
+            // 
+            this.Warning.Image = ((System.Drawing.Image)(resources.GetObject("Warning.Image")));
+            this.Warning.Location = new System.Drawing.Point(0, 0);
+            this.Warning.Name = "Warning";
+            this.Warning.Size = new System.Drawing.Size(782, 453);
+            this.Warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Warning.TabIndex = 143;
+            this.Warning.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Warning);
+            this.Controls.Add(this.Sign);
             this.Controls.Add(this.HoleUnderWall);
             this.Controls.Add(this.Image10);
             this.Controls.Add(this.SeemoreLaser2);
@@ -1995,6 +2022,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreTrying)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Image10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HoleUnderWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sign)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Warning)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2142,5 +2171,7 @@
         private Button SeemoreLaser2;
         private PictureBox Image10;
         private PictureBox HoleUnderWall;
+        private PictureBox Sign;
+        private PictureBox Warning;
     }
 }
