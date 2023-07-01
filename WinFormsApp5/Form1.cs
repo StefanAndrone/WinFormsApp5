@@ -39,6 +39,8 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            HoleUnderWall.Visible = false;
+            Image10.Visible = false;
             SeemoreLaser2.Visible = SeemoreTrying.Visible = false;
             //MessageBox.Show(Convert.ToString(SeemoreRight.Width), Convert.ToString(SeemoreRight.Height));
             Top.Visible = false;
@@ -1744,6 +1746,51 @@ namespace WinFormsApp5
                 await Task.Delay(3500);
                 Speak.Visible = SeemoreTrying.Visible = false;
                 blocked1 = 0;
+            }
+        }
+
+        private async void Bottom_Click(object sender, EventArgs e)
+        {
+            if (pictureBox31.Visible == true && pictureBox31.Location.X == ShovelPB.Location.X - 5 && pictureBox31.Location.Y == ShovelPB.Location.Y - 5)
+            {
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                Speak.Visible = true;
+                Speak.BringToFront();
+                Speak.Location = new Point(230, 133);
+                Speak.Text = "It looks like under this wall there is rock, not ground. I can't dig it.";
+                Speak.Height = 120;
+                Speak.Width = 200;
+                await Task.Delay(3500);
+                blocked1 = 0;
+                Speak.Visible = false;
+                return;
+            }
+            if (pictureBox31.Visible == true && pictureBox31.Location.X == SeemorePB.Location.X - 5 && pictureBox31.Location.Y == SeemorePB.Location.Y - 5)
+            {
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                SeemoreTrying.Visible = true;
+                await Task.Delay(1000);
+                Image10.Visible = true;
+                await Task.Delay(1000);
+                Image10.Visible = false;
+                HoleUnderWall.Visible = true;
+                await Task.Delay(1000);
+                Speak.Visible = true;
+                Speak.BringToFront();
+                Speak.Location = new Point(230, 133);
+                Speak.Text = "It's enough, thanks. Now we can pass.";
+                Speak.Height = 120;
+                Speak.Width = 200;
+                await Task.Delay(3500);
+                Speak.Visible = false;
+                //await Task.Delay(1000);
+                Top.Visible = Bottom.Visible = SeemoreTrying.Visible = HoleUnderWall.Visible = false;
+                RightArrow.Visible = true;
+                var = 14;
+                blocked1 = 0;
+                return;
             }
         }
     }
