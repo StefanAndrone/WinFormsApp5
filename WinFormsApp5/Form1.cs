@@ -39,6 +39,10 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Back5.Visible = false;
+            Lose10.Visible = false;
+            pictureBox32.Visible = pictureBox33.Visible = pictureBox34.Visible = pictureBox35.Visible = pictureBox36.Visible = false;
+            Image11.Visible = Film.Visible = false;
             Warning.Visible = false;
             Sign.Visible = false;
             HoleUnderWall.Visible = false;
@@ -361,6 +365,37 @@ namespace WinFormsApp5
                 RightArrow.Visible = false;
                 Top.Visible = true;
                 Bottom.Visible = true;
+            }
+            else if(var == 14)
+            {
+                blocked1 = 1;
+                pictureBox31.Visible = false;
+                Film.Visible = true;
+                Image11.Visible = true;
+                Film.BringToFront();
+                Image11.BringToFront();
+                Film.Image = pictureBox34.Image;
+                await Task.Delay(1000);
+                Film.Image = pictureBox33.Image;
+                await Task.Delay(1000);
+                Film.Image = pictureBox32.Image;
+                await Task.Delay(1000);
+                Speak.Location = new Point(85, 130);
+                Speak.Height = 60;
+                Speak.Width = 200;
+                Speak.Text = "Where do you think you're going, Robin?";
+                Speak.Visible = true;
+                Speak.BringToFront();
+                await Task.Delay(3500);
+                Speak.Visible = false;
+                Film.Image = pictureBox36.Image;
+                await Task.Delay(1000);
+                Film.Image = pictureBox35.Image;
+                await Task.Delay(2000);
+                Lose10.Visible = true;
+                Back5.Visible = true;
+                Lose10.BringToFront();
+                Back5.BringToFront();
             }
         }
 
@@ -1804,6 +1839,17 @@ namespace WinFormsApp5
             Warning.BringToFront();
             Back3.Visible = true;
             Back3.BringToFront();
+        }
+
+        private void Warning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back5_Click(object sender, EventArgs e)
+        {
+            blocked1 = 0;
+            Film.Visible = Image11.Visible = Back5.Visible = Lose10.Visible = false;
         }
     }
 }

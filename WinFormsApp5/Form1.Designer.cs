@@ -172,6 +172,15 @@
             this.HoleUnderWall = new System.Windows.Forms.PictureBox();
             this.Sign = new System.Windows.Forms.PictureBox();
             this.Warning = new System.Windows.Forms.PictureBox();
+            this.Image11 = new System.Windows.Forms.PictureBox();
+            this.Film = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.Lose10 = new System.Windows.Forms.PictureBox();
+            this.Back5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -293,6 +302,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.HoleUnderWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Warning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Film)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1750,12 +1768,108 @@
             this.Warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Warning.TabIndex = 143;
             this.Warning.TabStop = false;
+            this.Warning.Click += new System.EventHandler(this.Warning_Click);
+            // 
+            // Image11
+            // 
+            this.Image11.Image = ((System.Drawing.Image)(resources.GetObject("Image11.Image")));
+            this.Image11.Location = new System.Drawing.Point(190, 0);
+            this.Image11.Name = "Image11";
+            this.Image11.Size = new System.Drawing.Size(593, 130);
+            this.Image11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Image11.TabIndex = 144;
+            this.Image11.TabStop = false;
+            // 
+            // Film
+            // 
+            this.Film.Image = ((System.Drawing.Image)(resources.GetObject("Film.Image")));
+            this.Film.Location = new System.Drawing.Point(-1, 130);
+            this.Film.Name = "Film";
+            this.Film.Size = new System.Drawing.Size(784, 325);
+            this.Film.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Film.TabIndex = 145;
+            this.Film.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
+            this.pictureBox32.Location = new System.Drawing.Point(190, 148);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox32.TabIndex = 146;
+            this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
+            this.pictureBox33.Location = new System.Drawing.Point(343, 167);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox33.TabIndex = 147;
+            this.pictureBox33.TabStop = false;
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
+            this.pictureBox34.Location = new System.Drawing.Point(474, 91);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox34.TabIndex = 148;
+            this.pictureBox34.TabStop = false;
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
+            this.pictureBox35.Location = new System.Drawing.Point(209, 49);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox35.TabIndex = 149;
+            this.pictureBox35.TabStop = false;
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
+            this.pictureBox36.Location = new System.Drawing.Point(384, 23);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox36.TabIndex = 150;
+            this.pictureBox36.TabStop = false;
+            // 
+            // Lose10
+            // 
+            this.Lose10.Image = ((System.Drawing.Image)(resources.GetObject("Lose10.Image")));
+            this.Lose10.Location = new System.Drawing.Point(0, 0);
+            this.Lose10.Name = "Lose10";
+            this.Lose10.Size = new System.Drawing.Size(782, 453);
+            this.Lose10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Lose10.TabIndex = 151;
+            this.Lose10.TabStop = false;
+            // 
+            // Back5
+            // 
+            this.Back5.Image = ((System.Drawing.Image)(resources.GetObject("Back5.Image")));
+            this.Back5.Location = new System.Drawing.Point(540, 371);
+            this.Back5.Name = "Back5";
+            this.Back5.Size = new System.Drawing.Size(211, 62);
+            this.Back5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Back5.TabIndex = 152;
+            this.Back5.TabStop = false;
+            this.Back5.Click += new System.EventHandler(this.Back5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.Back5);
+            this.Controls.Add(this.Lose10);
+            this.Controls.Add(this.pictureBox36);
+            this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.pictureBox34);
+            this.Controls.Add(this.pictureBox33);
+            this.Controls.Add(this.pictureBox32);
+            this.Controls.Add(this.Film);
+            this.Controls.Add(this.Image11);
             this.Controls.Add(this.Warning);
             this.Controls.Add(this.Sign);
             this.Controls.Add(this.HoleUnderWall);
@@ -2024,6 +2138,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.HoleUnderWall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Warning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Film)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lose10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Back5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2173,5 +2296,14 @@
         private PictureBox HoleUnderWall;
         private PictureBox Sign;
         private PictureBox Warning;
+        private PictureBox Image11;
+        private PictureBox Film;
+        private PictureBox pictureBox32;
+        private PictureBox pictureBox33;
+        private PictureBox pictureBox34;
+        private PictureBox pictureBox35;
+        private PictureBox pictureBox36;
+        private PictureBox Lose10;
+        private PictureBox Back5;
     }
 }
