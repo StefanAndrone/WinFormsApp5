@@ -39,6 +39,7 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            SeemoreOnSkate.Visible = false;
             SeemoreSkate.Visible = false;
             SeemoreGround.Visible = false;
             Back5.Visible = false;
@@ -1867,6 +1868,17 @@ namespace WinFormsApp5
                 Magnet.Location = PlankPB.Location;
                 PlankPB.Location = SkatePB.Location;
                 RemotePB.Dispose();
+            }
+        }
+
+        private void SeemoreSkate_Click(object sender, EventArgs e)
+        {
+            if (pictureBox31.Visible == true && pictureBox31.Location.X == SeemorePB.Location.X - 5 && pictureBox31.Location.Y == SeemorePB.Location.Y - 5)
+            {
+                pictureBox31.Visible = false;               
+                SeemoreSkate.Dispose();
+                SeemorePB.Dispose();
+                SeemoreOnSkate.Visible = true;
             }
         }
     }

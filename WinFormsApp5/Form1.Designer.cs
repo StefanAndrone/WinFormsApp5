@@ -183,6 +183,7 @@
             this.Back5 = new System.Windows.Forms.PictureBox();
             this.SeemoreGround = new System.Windows.Forms.PictureBox();
             this.SeemoreSkate = new System.Windows.Forms.PictureBox();
+            this.SeemoreOnSkate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -315,6 +316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreSkate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreOnSkate)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1873,18 +1875,30 @@
             // SeemoreSkate
             // 
             this.SeemoreSkate.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreSkate.Image")));
-            this.SeemoreSkate.Location = new System.Drawing.Point(346, 303);
+            this.SeemoreSkate.Location = new System.Drawing.Point(419, 318);
             this.SeemoreSkate.Name = "SeemoreSkate";
-            this.SeemoreSkate.Size = new System.Drawing.Size(188, 90);
+            this.SeemoreSkate.Size = new System.Drawing.Size(131, 71);
             this.SeemoreSkate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SeemoreSkate.TabIndex = 154;
             this.SeemoreSkate.TabStop = false;
+            this.SeemoreSkate.Click += new System.EventHandler(this.SeemoreSkate_Click);
+            // 
+            // SeemoreOnSkate
+            // 
+            this.SeemoreOnSkate.Image = ((System.Drawing.Image)(resources.GetObject("SeemoreOnSkate.Image")));
+            this.SeemoreOnSkate.Location = new System.Drawing.Point(429, 166);
+            this.SeemoreOnSkate.Name = "SeemoreOnSkate";
+            this.SeemoreOnSkate.Size = new System.Drawing.Size(121, 223);
+            this.SeemoreOnSkate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeemoreOnSkate.TabIndex = 155;
+            this.SeemoreOnSkate.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.SeemoreOnSkate);
             this.Controls.Add(this.SeemoreSkate);
             this.Controls.Add(this.SeemoreGround);
             this.Controls.Add(this.Back5);
@@ -2175,6 +2189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Back5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreGround)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreSkate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeemoreOnSkate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2335,5 +2350,6 @@
         private PictureBox Back5;
         private PictureBox SeemoreGround;
         private PictureBox SeemoreSkate;
+        private PictureBox SeemoreOnSkate;
     }
 }
