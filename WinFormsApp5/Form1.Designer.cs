@@ -193,6 +193,7 @@
             this.Image23 = new System.Windows.Forms.PictureBox();
             this.button15 = new System.Windows.Forms.Button();
             this.TheEnd = new System.Windows.Forms.PictureBox();
+            this.button16 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -1992,11 +1993,23 @@
             this.TheEnd.TabIndex = 164;
             this.TheEnd.TabStop = false;
             // 
+            // button16
+            // 
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.Location = new System.Drawing.Point(343, 287);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(117, 169);
+            this.button16.TabIndex = 165;
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.TheEnd);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.Image23);
@@ -2476,5 +2489,6 @@
         private PictureBox Image23;
         private Button button15;
         private PictureBox TheEnd;
+        private Button button16;
     }
 }

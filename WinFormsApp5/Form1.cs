@@ -39,6 +39,7 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            button16.Visible = false;
             TheEnd.Visible = false;
             button15.Visible = false;
             Image17.Visible = Image18.Visible = Image19.Visible = Image20.Visible = Image21.Visible = Image22.Visible = Image23.Visible = false;
@@ -54,7 +55,6 @@ namespace WinFormsApp5
             HoleUnderWall.Visible = false;
             Image10.Visible = false;
             SeemoreLaser2.Visible = SeemoreTrying.Visible = false;
-            //MessageBox.Show(Convert.ToString(SeemoreRight.Width), Convert.ToString(SeemoreRight.Height));
             Top.Visible = false;
             Bottom.Visible = false;
             SeemorePB.Visible = false;
@@ -1118,10 +1118,13 @@ namespace WinFormsApp5
                 await Task.Delay(2500);
                 Image4.Visible = true;
                 Image4.BringToFront();
+                button16.Visible = true;
+                button16.BringToFront();
                 Speak2.Location = new Point(284, 151);
                 Speak2.Text = "You've got to be kidding me...";
                 Speak2.BringToFront();
                 await Task.Delay(2500);
+                button16.Visible = false;
                 Lose6.Visible = true;
                 Lose6.BringToFront();
                 Back.Visible = true;
