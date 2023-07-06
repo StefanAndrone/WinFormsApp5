@@ -39,6 +39,9 @@ namespace WinFormsApp5
         int laser_defeated = 0;
         private void Form1_Load(object sender, EventArgs e)
         {
+            TheEnd.Visible = false;
+            button15.Visible = false;
+            Image17.Visible = Image18.Visible = Image19.Visible = Image20.Visible = Image21.Visible = Image22.Visible = Image23.Visible = false;
             SeemoreOnSkate.Visible = false;
             SeemoreSkate.Visible = false;
             SeemoreGround.Visible = false;
@@ -308,54 +311,54 @@ namespace WinFormsApp5
                 Speak.Visible = true;
                 Speak.Text = "Wait a minute. I think I can finally find out the explanation why I am here on the Moon instead of, I don't know, my bed...";
                 Speak.Location = new Point(361, 105);
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Text = "I should go back to See-more...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 RightArrow.Visible = false;
                 SeemoreFurious.Visible = true;
                 Robin.Location = new Point(Robin.Location.X - 135, Robin.Location.Y);
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "Who's behind this, See-more? What am I doing on the Moon?";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "If you give me back my remote, I will tell you.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "If I give you back the remote, I'm dead.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "Honestly, I wouldn't want to kill you, or anyone... I've changed. But I must kill you if I want to survive...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "Survive who? Is it that bad?";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "If I tell you we're both dead.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(256, 105);
                 Speak.Height = Speak.Height + 40;
                 Speak.Text = "Are they that powerful? I've defeated Predator, Mad Mod, you, and a couple of lasers without superpowers, and you are a pretty good hacker. How bad could it be?";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Height = Speak.Height - 40;
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "Predator and Mad Mod? I guess I underestimated you... Alright. It's Brother Blood. Brother Blood brought both of us here.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "He brought me to kill you, and you... to die here without a trace. I didn't know about Predator and Mad Mod, though...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "If you and I work together, he'd go down... Also, I presume he has a spaceship?";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "Brother Blood could have teleported, but let's hope that... Please give me a chance. I will prove myself helpful.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "Alright. Let's find Brother Blood!";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 SeemoreFurious.Visible = false;
                 Speak.Location = new Point(256, 105);
                 Speak.Text = "Now Seemore will be in the inventory instead of his remote.";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 SeemorePB.Visible = true;
                 SeemorePB.BringToFront();
                 blocked1 = 0;
@@ -389,7 +392,7 @@ namespace WinFormsApp5
                 Speak.Text = "Where do you think you're going, Robin?";
                 Speak.Visible = true;
                 Speak.BringToFront();
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Visible = false;
                 Film.Image = pictureBox36.Image;
                 await Task.Delay(1000);
@@ -1447,18 +1450,18 @@ namespace WinFormsApp5
                 SeemoreFurious.BringToFront();
                 Speak.BringToFront();
                 Speak.Text = "My beam... it worked a few minutes ago... This isn't happening...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Text = "You! Give me back my remote!!! It's not yours! It's private property!";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(Speak.Location.X - 100, Speak.Location.Y);
                 Speak.Text = "Too bad, See-more... Too bad...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(356, 105);
                 Speak.Text = "Whatever. At least here I can't be imprisoned...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Location = new Point(Speak.Location.X - 100, Speak.Location.Y);
                 Speak.Text = "Let's keep moving now...";
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 SeemoreLeft.Visible = false;
                 SeemoreRight.Visible = false;
                 SeemoreFurious.Visible = false;
@@ -1538,11 +1541,11 @@ namespace WinFormsApp5
                     Speak.Width = Speak.Width + 30;
                     Hole2.Visible = true;
                     Speak.Text = "Let's see what this remote does...";
-                    await Task.Delay(3500);
+                    await Task.Delay(5500);
                     Speak.Text = "It's written here that its role is to control See-more's devices, including this laser and... the equipment See-more is wearing?! Interesting...";
                     await Task.Delay(6000);
                     Speak.Text = "Alright, this laser is off. Let's get out of here...";
-                    await Task.Delay(3500);
+                    await Task.Delay(5500);
                     Speak.Visible = false;
                     LaserSafe.Visible = false;
                     Safe.Visible = false;
@@ -1784,7 +1787,7 @@ namespace WinFormsApp5
                 Speak.Text = "It resists to my beam?! Seriously?";
                 Speak.Height = 60;
                 Speak.Width = 200;
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Visible = SeemoreTrying.Visible = false;
                 blocked1 = 0;
             }
@@ -1802,7 +1805,7 @@ namespace WinFormsApp5
                 Speak.Text = "It looks like under this wall there is rock, not ground. I can't dig it.";
                 Speak.Height = 120;
                 Speak.Width = 200;
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 blocked1 = 0;
                 Speak.Visible = false;
                 return;
@@ -1824,7 +1827,7 @@ namespace WinFormsApp5
                 Speak.Text = "It's enough, thanks. Now we can pass.";
                 Speak.Height = 120;
                 Speak.Width = 200;
-                await Task.Delay(3500);
+                await Task.Delay(5500);
                 Speak.Visible = false;
                 //await Task.Delay(1000);
                 Top.Visible = Bottom.Visible = SeemoreTrying.Visible = HoleUnderWall.Visible = false;
@@ -1840,6 +1843,8 @@ namespace WinFormsApp5
 
         private void Sign_Click(object sender, EventArgs e)
         {
+            if (blocked1 == 1)
+                return;
             Warning.Visible = true;
             Warning.BringToFront();
             Back3.Visible = true;
@@ -1871,7 +1876,7 @@ namespace WinFormsApp5
             }
         }
 
-        private void SeemoreSkate_Click(object sender, EventArgs e)
+        private async void SeemoreSkate_Click(object sender, EventArgs e)
         {
             if (pictureBox31.Visible == true && pictureBox31.Location.X == SeemorePB.Location.X - 5 && pictureBox31.Location.Y == SeemorePB.Location.Y - 5)
             {
@@ -1879,6 +1884,94 @@ namespace WinFormsApp5
                 SeemoreSkate.Dispose();
                 SeemorePB.Dispose();
                 SeemoreOnSkate.Visible = true;
+                blocked1 = 1;
+                RightArrow.Visible = false;
+                Speak.Location = new Point(240, 156);
+                Speak.Visible = true;
+                Speak.Text = "Alright, here's the plan: you'll go with the skateboard behind the spaceship.";
+                Speak.Height = 140;
+                Speak.Width = 200;
+                await Task.Delay(5500);
+                Speak.Text = "The idea is that you will not be detected because only the LEG MOVEMENTS are detected, but your legs will not move, your skate will move you.";
+                await Task.Delay(5500);
+                Speak.Location = new Point(523, 124);
+                Speak.Text = "Got it. Let's do this!";
+                await Task.Delay(5500);
+                Speak.Visible = false;
+                SeemoreOnSkate.Visible = false;
+                Film.Visible = true;
+                Image11.Visible = true;
+                Film.Image = Image17.Image;
+                await Task.Delay(2000);
+                Film.Visible = false;
+                Image11.Visible = false;
+                Speak.Location = new Point(240, 156);
+                Speak.Visible = true;
+                Speak.Text = "Seemore passed undetected. Now let's put an end to this...";
+                await Task.Delay(5500);
+                Speak.Visible = false;
+                Film.Visible = true;
+                Image11.Visible = true;
+                Film.Image = Image18.Image;
+                await Task.Delay(1000);
+                Film.Image = Image19.Image;
+                await Task.Delay(1000);
+                Film.Image = Image20.Image;
+                await Task.Delay(1000);
+                Film.Image = Image21.Image;
+                await Task.Delay(1000);
+                Film.Image = Image22.Image;
+                await Task.Delay(1000);
+                Speak.Visible = true;
+                Speak.Location = button15.Location;
+                Speak.Width = button15.Width;
+                Speak.Height = button15.Height;
+                Speak.Text = "Take this!";
+                await Task.Delay(1000);
+                Speak.Visible = false;
+                Film.Image = Image23.Image;
+                await Task.Delay(1000);
+                Film.Image = Image22.Image;
+                Speak.Visible = true;
+                Speak.Location = button15.Location;
+                Speak.Width = button15.Width;
+                Speak.Height = button15.Height;
+                Speak.Text = "Now this!";
+                await Task.Delay(1000);
+                Speak.Visible = false;
+                Film.Image = Image23.Image;
+                await Task.Delay(1000);
+                Film.Image = Image22.Image;
+                Speak.Visible = true;
+                Speak.Location = button15.Location;
+                Speak.Width = button15.Width;
+                Speak.Height = button15.Height;
+                Speak.Text = "And now this!";
+                await Task.Delay(1000);
+                Speak.Visible = false;
+                Film.Image = Image23.Image;
+                await Task.Delay(1000);
+                Film.Image = Image22.Image;
+                Speak.Visible = true;
+                Speak.Location = button15.Location;
+                Speak.Width = button15.Width;
+                Speak.Height = button15.Height;
+                Speak.Text = "That's it.";
+                await Task.Delay(5500);
+                Speak.Location = new Point(125, 130);
+                Speak.Text = "Now he'll be taken into custody... Now we can finally go home. Many thanks to the players who decided to help us...";
+                Speak.Height = 140;
+                Speak.Width = 200;
+                await Task.Delay(5500);
+                Speak.Location = button15.Location;
+                Speak.Location = new Point(Speak.Location.X - 30, Speak.Location.Y);
+                Speak.Text = "Thank you for giving me a chance, Robin...";
+                await Task.Delay(5500);
+                Speak.Location = new Point(125, 130);
+                Speak.Text = "Thank you for your help. I just hope you'll remain good. Now let's go to Earth. Finally!";
+                await Task.Delay(5500);
+                TheEnd.Visible = true;
+                TheEnd.BringToFront();
             }
         }
     }

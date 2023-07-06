@@ -184,6 +184,15 @@
             this.SeemoreGround = new System.Windows.Forms.PictureBox();
             this.SeemoreSkate = new System.Windows.Forms.PictureBox();
             this.SeemoreOnSkate = new System.Windows.Forms.PictureBox();
+            this.Image17 = new System.Windows.Forms.PictureBox();
+            this.Image18 = new System.Windows.Forms.PictureBox();
+            this.Image19 = new System.Windows.Forms.PictureBox();
+            this.Image20 = new System.Windows.Forms.PictureBox();
+            this.Image21 = new System.Windows.Forms.PictureBox();
+            this.Image22 = new System.Windows.Forms.PictureBox();
+            this.Image23 = new System.Windows.Forms.PictureBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.TheEnd = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Robin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Predator)).BeginInit();
@@ -317,6 +326,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreSkate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreOnSkate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TheEnd)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1893,11 +1910,102 @@
             this.SeemoreOnSkate.TabIndex = 155;
             this.SeemoreOnSkate.TabStop = false;
             // 
+            // Image17
+            // 
+            this.Image17.Image = ((System.Drawing.Image)(resources.GetObject("Image17.Image")));
+            this.Image17.Location = new System.Drawing.Point(8, 8);
+            this.Image17.Name = "Image17";
+            this.Image17.Size = new System.Drawing.Size(125, 62);
+            this.Image17.TabIndex = 156;
+            this.Image17.TabStop = false;
+            // 
+            // Image18
+            // 
+            this.Image18.Image = ((System.Drawing.Image)(resources.GetObject("Image18.Image")));
+            this.Image18.Location = new System.Drawing.Point(165, 7);
+            this.Image18.Name = "Image18";
+            this.Image18.Size = new System.Drawing.Size(125, 62);
+            this.Image18.TabIndex = 157;
+            this.Image18.TabStop = false;
+            // 
+            // Image19
+            // 
+            this.Image19.Image = ((System.Drawing.Image)(resources.GetObject("Image19.Image")));
+            this.Image19.Location = new System.Drawing.Point(319, 7);
+            this.Image19.Name = "Image19";
+            this.Image19.Size = new System.Drawing.Size(125, 62);
+            this.Image19.TabIndex = 158;
+            this.Image19.TabStop = false;
+            // 
+            // Image20
+            // 
+            this.Image20.Image = ((System.Drawing.Image)(resources.GetObject("Image20.Image")));
+            this.Image20.Location = new System.Drawing.Point(474, 7);
+            this.Image20.Name = "Image20";
+            this.Image20.Size = new System.Drawing.Size(125, 62);
+            this.Image20.TabIndex = 159;
+            this.Image20.TabStop = false;
+            // 
+            // Image21
+            // 
+            this.Image21.Image = ((System.Drawing.Image)(resources.GetObject("Image21.Image")));
+            this.Image21.Location = new System.Drawing.Point(10, 91);
+            this.Image21.Name = "Image21";
+            this.Image21.Size = new System.Drawing.Size(125, 62);
+            this.Image21.TabIndex = 160;
+            this.Image21.TabStop = false;
+            // 
+            // Image22
+            // 
+            this.Image22.Image = ((System.Drawing.Image)(resources.GetObject("Image22.Image")));
+            this.Image22.Location = new System.Drawing.Point(165, 91);
+            this.Image22.Name = "Image22";
+            this.Image22.Size = new System.Drawing.Size(125, 62);
+            this.Image22.TabIndex = 161;
+            this.Image22.TabStop = false;
+            // 
+            // Image23
+            // 
+            this.Image23.Image = ((System.Drawing.Image)(resources.GetObject("Image23.Image")));
+            this.Image23.Location = new System.Drawing.Point(319, 91);
+            this.Image23.Name = "Image23";
+            this.Image23.Size = new System.Drawing.Size(125, 62);
+            this.Image23.TabIndex = 162;
+            this.Image23.TabStop = false;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(514, 200);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(187, 29);
+            this.button15.TabIndex = 163;
+            this.button15.Text = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // TheEnd
+            // 
+            this.TheEnd.Image = ((System.Drawing.Image)(resources.GetObject("TheEnd.Image")));
+            this.TheEnd.Location = new System.Drawing.Point(-1, 0);
+            this.TheEnd.Name = "TheEnd";
+            this.TheEnd.Size = new System.Drawing.Size(783, 452);
+            this.TheEnd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TheEnd.TabIndex = 164;
+            this.TheEnd.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.TheEnd);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.Image23);
+            this.Controls.Add(this.Image22);
+            this.Controls.Add(this.Image21);
+            this.Controls.Add(this.Image20);
+            this.Controls.Add(this.Image19);
+            this.Controls.Add(this.Image18);
+            this.Controls.Add(this.Image17);
             this.Controls.Add(this.SeemoreOnSkate);
             this.Controls.Add(this.SeemoreSkate);
             this.Controls.Add(this.SeemoreGround);
@@ -2190,6 +2298,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreGround)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreSkate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeemoreOnSkate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Image23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TheEnd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2351,5 +2467,14 @@
         private PictureBox SeemoreGround;
         private PictureBox SeemoreSkate;
         private PictureBox SeemoreOnSkate;
+        private PictureBox Image17;
+        private PictureBox Image18;
+        private PictureBox Image19;
+        private PictureBox Image20;
+        private PictureBox Image21;
+        private PictureBox Image22;
+        private PictureBox Image23;
+        private Button button15;
+        private PictureBox TheEnd;
     }
 }
